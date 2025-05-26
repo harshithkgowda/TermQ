@@ -21,10 +21,14 @@ configurePdfWorker()
 // Function to extract text from an image
 export async function extractTextFromImage(imageUrl: string): Promise<string> {
   const worker = await createWorker('eng')
-
+  
   try {
+    // Tesseract.js works with both blob URLs and data URLs
     const { data: { text } } = await worker.recognize(imageUrl)
-    return text
+    return text || "No text could be extracted from the image. Please try a clearer image or manually enter the text."
+  } catch (error) {
+    console.error("Tesseract error:", error)
+    throw new Error("Failed to extract text from image. Please try another image or manually enter the text.")
   } finally {
     await worker.terminate()
   }
@@ -184,8 +188,8 @@ async function analyzeWithVision(content: string, imageUrl: string): Promise<voi
   `
 
   try {
-    // Since we're working with client-side images, we need to actually pass the data URL
-    // We're already getting imageUrl as a URL created by URL.createObjectURL
+    // Pass the data URL directly to the vision model
+    // The imageUrl is already in the correct base64 data URL format from the InputSelector
     const result = await generateTextWithImages(analysisPrompt, [imageUrl], provider)
     processAnalysisResponse(result.text)
   } catch (error) {
