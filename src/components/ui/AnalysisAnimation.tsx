@@ -39,9 +39,9 @@ export default function AnalysisAnimation() {
     }, 2000);
     return () => clearInterval(interval);
   }, [steps.length]);
-  return <div className="flex flex-col items-center" data-unique-id="9a8afaf9-0097-4176-acdb-6486d4a02839" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
+  return <div className="flex flex-col items-center" data-unique-id="7925df7b-62f4-4430-b83b-1f72c05bb76f" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
       {/* Pulsing circle animation */}
-      <div className="relative mb-8" data-unique-id="ed941f20-c04d-4cea-9dbe-219894b387a6" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
+      <div className="relative mb-8" data-unique-id="d82cc4e0-e661-474e-a458-785c25de6e78" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
         <motion.div animate={{
         scale: [1, 1.2, 1],
         opacity: [0.6, 0.3, 0.6]
@@ -49,7 +49,7 @@ export default function AnalysisAnimation() {
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
-      }} className="absolute inset-0 rounded-full bg-purple-300" data-unique-id="398abc31-76cf-449c-b2df-a07dfa517f3e" data-file-name="components/ui/AnalysisAnimation.tsx" />
+      }} className="absolute inset-0 rounded-full bg-purple-300" data-unique-id="c513d1f2-c2ef-49f3-a4fd-ac3cca0379de" data-file-name="components/ui/AnalysisAnimation.tsx" />
         
         {/* Inner circle with rotating gradient */}
         <motion.div animate={{
@@ -58,12 +58,12 @@ export default function AnalysisAnimation() {
         duration: 8,
         repeat: Infinity,
         ease: "linear"
-      }} className="relative w-24 h-24 rounded-full overflow-hidden" data-unique-id="b86e4cbd-17fd-4571-a029-30b964afe0a6" data-file-name="components/ui/AnalysisAnimation.tsx">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500" data-unique-id="4f37ee09-10c6-4860-ac0d-4f75aae34e68" data-file-name="components/ui/AnalysisAnimation.tsx" />
+      }} className="relative w-24 h-24 rounded-full overflow-hidden" data-unique-id="b9815b8b-67a8-4ed0-b8d0-ac8b493e1c5e" data-file-name="components/ui/AnalysisAnimation.tsx">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500" data-unique-id="0437333a-7ef0-480a-a46b-b9b021bbe475" data-file-name="components/ui/AnalysisAnimation.tsx" />
         </motion.div>
         
         {/* Current step icon */}
-        <div className="absolute inset-0 flex items-center justify-center" data-unique-id="99e94b0d-9019-421f-99d7-72621d951491" data-file-name="components/ui/AnalysisAnimation.tsx">
+        <div className="absolute inset-0 flex items-center justify-center" data-unique-id="9e5e8260-abb7-4f16-8356-7ea5295c5345" data-file-name="components/ui/AnalysisAnimation.tsx">
           <motion.div key={currentStep} initial={{
           scale: 0.5,
           opacity: 0
@@ -75,18 +75,18 @@ export default function AnalysisAnimation() {
           opacity: 0
         }} transition={{
           duration: 0.3
-        }} className={`p-3 rounded-full ${steps[currentStep].color}`} data-unique-id="0d7b8611-e991-4fb2-a6fa-6dee9fceed48" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
+        }} className={`p-3 rounded-full ${steps[currentStep].color}`} data-unique-id="8d115792-25d8-4b3c-aec3-2a1508c67bfe" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
             {steps[currentStep].icon}
           </motion.div>
         </div>
       </div>
       
       {/* Processing steps */}
-      <div className="flex space-x-1" data-unique-id="49d37c60-acd0-4fb9-892c-5404b0993aaf" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
+      <div className="flex space-x-1" data-unique-id="e6dce743-61fb-4db4-b157-42aeb1de9174" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
         {steps.map((step, index) => <motion.div key={index} animate={{
         scale: currentStep === index ? 1.2 : 1,
         opacity: currentStep === index ? 1 : 0.5
-      }} className="w-2 h-2 rounded-full bg-purple-400" data-unique-id="950d5b93-cabd-4798-9445-1c517d7b21d3" data-file-name="components/ui/AnalysisAnimation.tsx" />)}
+      }} className="w-2 h-2 rounded-full bg-purple-400" data-unique-id="b0f7649a-c8b8-4129-89f5-5931c23d5c73" data-file-name="components/ui/AnalysisAnimation.tsx" />)}
       </div>
       
       {/* Current step text */}
@@ -100,7 +100,7 @@ export default function AnalysisAnimation() {
       opacity: 0
     }} transition={{
       duration: 0.3
-    }} className="mt-4 text-lg font-medium text-purple-700" data-unique-id="54284a6b-1b34-478a-8c4f-a4e3b3bea63f" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
+    }} className="mt-4 text-lg font-medium text-purple-700" data-unique-id="37eb43d5-a63d-4268-9d37-beda9e57886b" data-file-name="components/ui/AnalysisAnimation.tsx" data-dynamic-text="true">
         {steps[currentStep].text}
       </motion.div>
     </div>;
