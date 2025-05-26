@@ -1,4 +1,3 @@
-'use client'
 
 import { createWorker } from 'tesseract.js'
 import { useAnalyzerStore } from '@/store/useAnalyzerStore'
@@ -7,14 +6,22 @@ import * as pdfjs from 'pdfjs-dist'
 import mammoth from 'mammoth'
 import * as fileType from 'file-type'
 
-// Configure PDF.js worker
-const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.mjs')
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
+// Configure PDF.js worker - only in browser environment
+const configurePdfWorker = () => {
+  if (typeof window !== 'undefined') {
+    import('pdfjs-dist/build/pdf.worker.mjs').then(pdfjsWorker => {
+      pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
+    })
+  }
+}
+
+// Call the function to configure the worker
+configurePdfWorker()
 
 // Function to extract text from an image
 export async function extractTextFromImage(imageUrl: string): Promise<string> {
   const worker = await createWorker('eng')
-  
+
   try {
     const { data: { text } } = await worker.recognize(imageUrl)
     return text
@@ -27,13 +34,13 @@ export async function extractTextFromImage(imageUrl: string): Promise<string> {
 export async function extractTextFromPDF(file: File): Promise<string> {
   // Convert File to ArrayBuffer
   const arrayBuffer = await file.arrayBuffer()
-  
+
   // Load the PDF document
   const loadingTask = pdfjs.getDocument({ data: new Uint8Array(arrayBuffer) })
   const pdf = await loadingTask.promise
-  
+
   let fullText = ''
-  
+
   // Iterate through each page to extract text
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i)
@@ -41,7 +48,7 @@ export async function extractTextFromPDF(file: File): Promise<string> {
     const pageText = textContent.items.map((item: any) => item.str).join(' ')
     fullText += pageText + '\n\n'
   }
-  
+
   return fullText
 }
 
@@ -56,30 +63,30 @@ export async function extractTextFromDOCX(file: File): Promise<string> {
 export async function getFileType(file: File): Promise<string> {
   // First check by extension
   const extension = file.name.split('.').pop()?.toLowerCase()
-  
+
   if (extension === 'pdf') return 'pdf'
   if (extension === 'docx' || extension === 'doc') return 'docx'
   if (extension === 'txt') return 'txt'
-  
+
   // If extension is not conclusive, try to detect by content
   const arrayBuffer = await file.slice(0, 4100).arrayBuffer()
   const type = await fileType.fileTypeFromBuffer(new Uint8Array(arrayBuffer))
-  
+
   if (type?.mime.includes('pdf')) return 'pdf'
   if (type?.mime.includes('word') || type?.mime.includes('officedocument')) return 'docx'
   if (type?.mime.includes('text')) return 'txt'
-  
+
   return 'unknown'
 }
 
 // Function to analyze the T&C content
 export async function analyzeContent(): Promise<void> {
   const store = useAnalyzerStore.getState()
-  
+
   if (!store.content) {
     throw new Error("No content to analyze")
   }
-  
+
   // If we have an image, use vision-enabled model
   if (store.imageUrl) {
     await analyzeWithVision(store.content, store.imageUrl)
@@ -92,10 +99,10 @@ export async function analyzeContent(): Promise<void> {
 // Analyze using text-only model
 async function analyzeWithText(content: string): Promise<void> {
   const store = useAnalyzerStore.getState()
-  
+
   // Use Azure-GPT-4o for text analysis
   const provider = "azure-gpt-4o"
-  
+
   const analysisPrompt = `
     Analyze the following Terms & Conditions text and identify important points that fall into these categories:
     1. Harmful points (things that are clearly not in the user's interest)
@@ -127,7 +134,7 @@ async function analyzeWithText(content: string): Promise<void> {
     Here's the T&C text to analyze:
     ${content.substring(0, 15000)}
   `
-  
+
   try {
     const result = await generateText(analysisPrompt, provider)
     processAnalysisResponse(result.text)
@@ -140,10 +147,10 @@ async function analyzeWithText(content: string): Promise<void> {
 // Analyze using vision-enabled model for image inputs
 async function analyzeWithVision(content: string, imageUrl: string): Promise<void> {
   const store = useAnalyzerStore.getState()
-  
+
   // Use vision-enabled model
   const provider = "azure-gpt-4o"
-  
+
   const analysisPrompt = `
     Analyze the following Terms & Conditions text from the provided image and identify important points that fall into these categories:
     1. Harmful points (things that are clearly not in the user's interest)
@@ -175,7 +182,7 @@ async function analyzeWithVision(content: string, imageUrl: string): Promise<voi
     I've extracted the following text from the image but there may be errors:
     ${content.substring(0, 15000)}
   `
-  
+
   try {
     // Since we're working with client-side images, we need to actually pass the data URL
     // We're already getting imageUrl as a URL created by URL.createObjectURL
@@ -195,21 +202,21 @@ function processAnalysisResponse(responseText: string): void {
     if (!jsonMatch) {
       throw new Error("Invalid response format from AI model")
     }
-    
+
     const jsonStr = jsonMatch[0]
     const data = JSON.parse(jsonStr)
-    
+
     // Validate the response structure
     if (!data.analysis || !Array.isArray(data.analysis) || !data.summary || !Array.isArray(data.summary.points)) {
       throw new Error("Invalid response structure from AI model")
     }
-    
+
     // Add IDs to analysis points
     const analysisPointsWithIds = data.analysis.map((point: any, index: number) => ({
       ...point,
       id: `point-${index}`
     }))
-    
+
     // Update the store with the results
     useAnalyzerStore.getState().setAnalysisResults(
       analysisPointsWithIds,
