@@ -44,16 +44,16 @@ export default function DocumentManager() {
       setNewDocName('');
     }
   };
-  return <div className="mb-4 md:mb-6 px-4 md:px-6 pt-4 md:pt-6" data-unique-id="42fc57d5-6f0d-45cd-9240-1f2fffc8ae01" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3" data-unique-id="30831bea-97f6-4225-b3bb-ccfa1a13c682" data-file-name="components/analyzer/DocumentManager.tsx">
-        <h2 className="text-xl font-medium text-blue-800" data-unique-id="e84d7887-2d8e-42f6-8fbd-ab18dbe2453d" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="807b3a2c-69cb-4284-8f27-1d287867a170" data-file-name="components/analyzer/DocumentManager.tsx">Documents</span></h2>
+  return <div className="mb-4 md:mb-6 px-4 md:px-6 pt-4 md:pt-6" data-unique-id="2692b713-424d-4cf6-b998-bfd3794403a9" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3" data-unique-id="135c2cad-37bf-4475-8c9f-d4912ad887ea" data-file-name="components/analyzer/DocumentManager.tsx">
+        <h2 className="text-xl font-medium text-blue-800" data-unique-id="1344e8fe-6c14-4ff1-b206-491da9c0f4ee" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="544456a5-e622-4f50-a2d9-8aefb4e0a333" data-file-name="components/analyzer/DocumentManager.tsx">Documents</span></h2>
         
-        <div className="flex flex-wrap items-center gap-3" data-unique-id="cd4be5f5-b92d-470b-8502-69be2416679e" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+        <div className="flex flex-wrap items-center gap-3" data-unique-id="f42a6375-8482-4f1b-99b4-1732a33262a3" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
           <motion.button whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
-        }} onClick={() => setCompareMode(!isCompareMode)} className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium ${isCompareMode ? 'bg-blue-100 text-blue-700 border border-blue-300' : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-300'}`} data-unique-id="8d5c742b-3cb4-442f-b92d-ac9bced639d9" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+        }} onClick={() => setCompareMode(!isCompareMode)} className={`flex items-center px-3 py-1.5 rounded-md text-sm font-medium ${isCompareMode ? 'bg-blue-100 text-blue-700 border border-blue-300' : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-300'}`} data-unique-id="8b44a916-fc72-43c8-ba64-7f55e8050a97" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
             <ArrowLeftRight className="h-4 w-4 mr-1.5" />
             {isCompareMode ? 'Exit Compare' : 'Compare Mode'}
           </motion.button>
@@ -62,8 +62,8 @@ export default function DocumentManager() {
           scale: 1.05
         }} whileTap={{
           scale: 0.95
-        }} onClick={() => setIsCreatingNew(true)} className="flex items-center px-3 py-1.5 bg-blue-600 text-white rounded-md text-sm font-medium" data-unique-id="2c43644f-3cb6-40c2-b055-16fe76536f54" data-file-name="components/analyzer/DocumentManager.tsx">
-              <Plus className="h-4 w-4 mr-1.5" /><span className="editable-text" data-unique-id="0d636019-f71a-40c8-84ac-8144e644478a" data-file-name="components/analyzer/DocumentManager.tsx">
+        }} onClick={() => setIsCreatingNew(true)} className="flex items-center px-3 py-1.5 bg-blue-600 text-white rounded-md text-sm font-medium" data-unique-id="aae5dc84-af19-4396-908f-1f2e74e665c0" data-file-name="components/analyzer/DocumentManager.tsx">
+              <Plus className="h-4 w-4 mr-1.5" /><span className="editable-text" data-unique-id="03416e36-01cd-415c-9076-2599b0fea119" data-file-name="components/analyzer/DocumentManager.tsx">
               New Document
             </span></motion.button>}
         </div>
@@ -75,25 +75,25 @@ export default function DocumentManager() {
     }} animate={{
       opacity: 1,
       y: 0
-    }} className="flex items-center mb-4 bg-purple-50 p-2 rounded-md border border-purple-200" data-unique-id="b6deb406-9b7b-4e4b-bc59-55885448b950" data-file-name="components/analyzer/DocumentManager.tsx">
-          <input type="text" value={newDocName} onChange={e => setNewDocName(e.target.value)} onKeyDown={handleKeyDown} placeholder="Document name..." className="flex-1 px-3 py-1.5 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" autoFocus data-unique-id="29d9710f-3f12-429a-a22c-bec79981b4ed" data-file-name="components/analyzer/DocumentManager.tsx" />
-          <div className="flex space-x-2 ml-2" data-unique-id="a6b27d6f-358d-40e0-a16d-eeee4e7f1319" data-file-name="components/analyzer/DocumentManager.tsx">
-            <button onClick={handleCreateDocument} className="px-3 py-1.5 bg-purple-600 text-white rounded-md text-sm" data-unique-id="59d0ad7c-61aa-4fdc-8fc4-37007502b0a2" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="3151b1c6-3ebe-4c78-8a76-58d468e98c4c" data-file-name="components/analyzer/DocumentManager.tsx">
+    }} className="flex items-center mb-4 bg-purple-50 p-2 rounded-md border border-purple-200" data-unique-id="e729acbc-c14f-4cb1-9f64-3efa1771bdf0" data-file-name="components/analyzer/DocumentManager.tsx">
+          <input type="text" value={newDocName} onChange={e => setNewDocName(e.target.value)} onKeyDown={handleKeyDown} placeholder="Document name..." className="flex-1 px-3 py-1.5 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" autoFocus data-unique-id="40a58dee-a27e-407a-b4e3-08bd51e8ea37" data-file-name="components/analyzer/DocumentManager.tsx" />
+          <div className="flex space-x-2 ml-2" data-unique-id="7521399e-b62a-4cd7-8d1a-8715590fa6c4" data-file-name="components/analyzer/DocumentManager.tsx">
+            <button onClick={handleCreateDocument} className="px-3 py-1.5 bg-purple-600 text-white rounded-md text-sm" data-unique-id="1a6d8706-eb5d-481d-9b51-e044112e68d8" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="1be1d2c4-a97b-49ab-b710-93902dde0023" data-file-name="components/analyzer/DocumentManager.tsx">
               Create
             </span></button>
             <button onClick={() => {
           setIsCreatingNew(false);
           setNewDocName('');
-        }} className="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-md text-sm" data-unique-id="c47dc815-f3c7-4132-b6f5-42b9c9b37603" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="7647adf7-0afc-4cc2-91e0-50c95da78891" data-file-name="components/analyzer/DocumentManager.tsx">
+        }} className="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-md text-sm" data-unique-id="31517c37-b556-4c87-a0b7-66762a32344b" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="b5cbbd1b-55f5-44f7-a97a-8046d0f9bd29" data-file-name="components/analyzer/DocumentManager.tsx">
               Cancel
             </span></button>
           </div>
         </motion.div>}
       
-      {documents.length === 0 ? <div className="text-center py-8 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="478eb5dc-5b60-4ba8-a70d-90d39fe58b8d" data-file-name="components/analyzer/DocumentManager.tsx">
+      {documents.length === 0 ? <div className="text-center py-8 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="9e6ce23b-967e-4386-a824-b85c11283fb2" data-file-name="components/analyzer/DocumentManager.tsx">
           <FileText className="h-10 w-10 text-slate-400 mx-auto mb-2" />
-          <p className="text-slate-600" data-unique-id="832ec363-c893-4ff1-a8e2-2f139147db0d" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="cfe95881-f225-4c09-86ba-d7e882173802" data-file-name="components/analyzer/DocumentManager.tsx">No documents yet. Create your first document to get started.</span></p>
-        </div> : <div className="grid grid-cols-1 gap-2" data-unique-id="d68ccd6c-f092-4e5a-b7e0-68e042ce46b0" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+          <p className="text-slate-600" data-unique-id="e72c79e7-01c1-47a1-b661-5a60f1fa8033" data-file-name="components/analyzer/DocumentManager.tsx"><span className="editable-text" data-unique-id="19d620fc-6e35-45f3-a4ae-bcb24575717d" data-file-name="components/analyzer/DocumentManager.tsx">No documents yet. Create your first document to get started.</span></p>
+        </div> : <div className="grid grid-cols-1 gap-2" data-unique-id="1d6e026b-a557-41d4-9536-6f8e77339032" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
           {documents.map(doc => <DocumentItem key={doc.id} document={doc} isActive={doc.id === currentDocumentId} isSelected={compareDocumentIds.includes(doc.id)} isCompareMode={isCompareMode} onSelect={() => setCurrentDocument(doc.id)} onDelete={() => removeDocument(doc.id)} onToggleCompare={() => toggleCompareDocument(doc.id)} />)}
         </div>}
     </div>;
@@ -126,26 +126,26 @@ function DocumentItem({
   };
   return <motion.div whileHover={{
     scale: 1.01
-  }} onHoverStart={() => setIsHovering(true)} onHoverEnd={() => setIsHovering(false)} onClick={isCompareMode ? onToggleCompare : onSelect} className={`flex items-center justify-between p-3 rounded-md cursor-pointer border ${isActive && !isCompareMode ? 'bg-blue-100 border-blue-300' : isSelected && isCompareMode ? 'bg-blue-100 border-blue-300' : 'bg-white border-slate-200 hover:border-blue-200'}`} data-unique-id="5a5ccf37-71af-4ae8-8c5b-8d549b76a470" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
-      <div className="flex items-center overflow-hidden" data-unique-id="b2601886-777e-4c3e-ad3f-45d002ce175a" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+  }} onHoverStart={() => setIsHovering(true)} onHoverEnd={() => setIsHovering(false)} onClick={isCompareMode ? onToggleCompare : onSelect} className={`flex items-center justify-between p-3 rounded-md cursor-pointer border ${isActive && !isCompareMode ? 'bg-blue-100 border-blue-300' : isSelected && isCompareMode ? 'bg-blue-100 border-blue-300' : 'bg-white border-slate-200 hover:border-blue-200'}`} data-unique-id="4007d9e7-f257-49f8-997f-24e61d56d846" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+      <div className="flex items-center overflow-hidden" data-unique-id="19b65529-3935-470d-8c68-fa12d45c1a90" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
         {isCompareMode ? isSelected ? <CheckSquare className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0" /> : <Square className="h-5 w-5 text-slate-400 mr-2 flex-shrink-0" /> : <FileText className={`h-5 w-5 mr-2 flex-shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />}
-        <div className="overflow-hidden" data-unique-id="c59f3e00-595c-414b-867c-c9a95a09a8b7" data-file-name="components/analyzer/DocumentManager.tsx">
-          <p className={`font-medium truncate ${isActive && !isCompareMode ? 'text-blue-800' : isSelected && isCompareMode ? 'text-blue-800' : 'text-slate-700'}`} data-unique-id="b4fa2e62-ef04-4ab1-ba2c-67e6985ba049" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+        <div className="overflow-hidden" data-unique-id="91e277a5-5ea1-4f75-b925-89b13df084e6" data-file-name="components/analyzer/DocumentManager.tsx">
+          <p className={`font-medium truncate ${isActive && !isCompareMode ? 'text-blue-800' : isSelected && isCompareMode ? 'text-blue-800' : 'text-slate-700'}`} data-unique-id="e6e03136-1f4e-4494-817d-9f6963eb8ddd" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
             {document.name}
           </p>
-          <p className="text-xs text-slate-500 truncate" data-unique-id="83f1a6e9-f12f-4852-9881-bc5f9c7df981" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
-            {new Date(document.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="02d593c1-b585-437e-9ef2-c5985cf3cf49" data-file-name="components/analyzer/DocumentManager.tsx"> • 
-            </span>{document.analysisPoints.length}<span className="editable-text" data-unique-id="4d1cbbbc-21dc-4af6-8baf-a4617bd57e45" data-file-name="components/analyzer/DocumentManager.tsx"> points
+          <p className="text-xs text-slate-500 truncate" data-unique-id="5c7bc245-1ebb-47f5-aa6e-2334f0713b73" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+            {new Date(document.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="c97e0c0d-6ee2-498a-b3a6-9848c3d20813" data-file-name="components/analyzer/DocumentManager.tsx"> • 
+            </span>{document.analysisPoints.length}<span className="editable-text" data-unique-id="8ffc6a7b-14b7-4004-b1d0-f368f4d003e4" data-file-name="components/analyzer/DocumentManager.tsx"> points
           </span></p>
         </div>
       </div>
       
-      {(isHovering || isActive || isSelected) && <div className="flex space-x-1 flex-shrink-0 ml-2" data-unique-id="c1f4b6d0-feaf-4d37-87b1-fdd42a5ecad9" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
+      {(isHovering || isActive || isSelected) && <div className="flex space-x-1 flex-shrink-0 ml-2" data-unique-id="a908f87a-a62b-446e-9ed6-9f9b621211d1" data-file-name="components/analyzer/DocumentManager.tsx" data-dynamic-text="true">
           {!isCompareMode && <motion.button whileHover={{
         scale: 1.1
       }} whileTap={{
         scale: 0.9
-      }} onClick={handleDelete} className="p-1 text-slate-400 hover:text-red-500 rounded-full hover:bg-red-50" data-unique-id="ab1fbac2-4efb-4ec6-a34b-fb5daaef6c0b" data-file-name="components/analyzer/DocumentManager.tsx">
+      }} onClick={handleDelete} className="p-1 text-slate-400 hover:text-red-500 rounded-full hover:bg-red-50" data-unique-id="55696a0d-6c31-4d1c-afeb-253de25ca331" data-file-name="components/analyzer/DocumentManager.tsx">
               <Trash2 className="h-4 w-4" />
             </motion.button>}
         </div>}

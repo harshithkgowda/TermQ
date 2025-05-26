@@ -14,6 +14,12 @@ export type Summary = {
   points: string[];
 }
 
+export type AIInsights = {
+  suggestions: string[];
+  risks: string[];
+  takeaways: string[];
+}
+
 export type Document = {
   id: string;
   name: string;
@@ -22,6 +28,7 @@ export type Document = {
   imageUrl: string | null;
   analysisPoints: AnalysisPoint[];
   summary: Summary;
+  aiInsights?: AIInsights;
   createdAt: Date;
 }
 
@@ -35,6 +42,7 @@ type AnalyzerState = {
   isAnalyzing: boolean;
   analysisPoints: AnalysisPoint[];
   summary: Summary;
+  aiInsights: AIInsights | null;
   error: string | null;
   isCompareMode: boolean;
   
@@ -51,7 +59,7 @@ type AnalyzerState = {
   setFile: (file: File | null) => void;
   setImageUrl: (url: string | null) => void;
   startAnalysis: () => void;
-  setAnalysisResults: (points: AnalysisPoint[], summary: Summary) => void;
+  setAnalysisResults: (points: AnalysisPoint[], summary: Summary, aiInsights: AIInsights) => void;
   setIsAnalyzing: (isAnalyzing: boolean) => void;
   setError: (error: string | null) => void;
   reset: () => void;
@@ -71,6 +79,7 @@ const initialState = {
   isAnalyzing: false,
   analysisPoints: [],
   summary: { points: [] },
+  aiInsights: null,
   error: null,
   isCompareMode: false,
 }
@@ -146,11 +155,12 @@ export const useAnalyzerStore = create<AnalyzerState>()(
       
       startAnalysis: () => set({ isAnalyzing: true }),
       
-      setAnalysisResults: (analysisPoints, summary) => {
+      setAnalysisResults: (analysisPoints, summary, aiInsights) => {
         const state = get();
         set({ 
           analysisPoints, 
           summary,
+          aiInsights,
           isAnalyzing: false 
         });
         
@@ -158,7 +168,8 @@ export const useAnalyzerStore = create<AnalyzerState>()(
         if (state.currentDocumentId) {
           get().updateDocument(state.currentDocumentId, {
             analysisPoints,
-            summary
+            summary,
+            aiInsights
           });
         }
       },
@@ -174,6 +185,7 @@ export const useAnalyzerStore = create<AnalyzerState>()(
         isAnalyzing: false,
         analysisPoints: [],
         summary: { points: [] },
+        aiInsights: null,
         error: null
       }),
       

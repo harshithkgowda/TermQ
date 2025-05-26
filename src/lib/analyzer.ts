@@ -151,6 +151,11 @@ async function analyzeWithText(content: string): Promise<void> {
     
     Also, create a summary of the entire T&C in 10 or fewer bullet points that capture the most important aspects.
     
+    Additionally, provide AI-powered insights with:
+    1. Suggestions for the user (what they should consider or do)
+    2. Potential risks that might not be obvious
+    3. Key takeaways that summarize the most important aspects
+    
     Format your response as JSON with this exact structure:
     {
       "analysis": [
@@ -165,6 +170,23 @@ async function analyzeWithText(content: string): Promise<void> {
           "First bullet point",
           "Second bullet point", 
           "etc. (max 10)"
+        ]
+      },
+      "aiInsights": {
+        "suggestions": [
+          "First suggestion",
+          "Second suggestion",
+          "etc. (3-5 items)"
+        ],
+        "risks": [
+          "First potential risk",
+          "Second potential risk",
+          "etc. (3-5 items)"
+        ],
+        "takeaways": [
+          "First key takeaway",
+          "Second key takeaway",
+          "etc. (3-5 items)"
         ]
       }
     }
@@ -199,6 +221,11 @@ async function analyzeWithVision(content: string, imageUrl: string): Promise<voi
     
     Also, create a summary of the entire T&C in 10 or fewer bullet points that capture the most important aspects.
     
+    Additionally, provide AI-powered insights with:
+    1. Suggestions for the user (what they should consider or do)
+    2. Potential risks that might not be obvious
+    3. Key takeaways that summarize the most important aspects
+    
     Format your response as JSON with this exact structure:
     {
       "analysis": [
@@ -213,6 +240,23 @@ async function analyzeWithVision(content: string, imageUrl: string): Promise<voi
           "First bullet point",
           "Second bullet point", 
           "etc. (max 10)"
+        ]
+      },
+      "aiInsights": {
+        "suggestions": [
+          "First suggestion",
+          "Second suggestion",
+          "etc. (3-5 items)"
+        ],
+        "risks": [
+          "First potential risk",
+          "Second potential risk",
+          "etc. (3-5 items)"
+        ],
+        "takeaways": [
+          "First key takeaway",
+          "Second key takeaway",
+          "etc. (3-5 items)"
         ]
       }
     }
@@ -245,7 +289,9 @@ function processAnalysisResponse(responseText: string): void {
     const data = JSON.parse(jsonStr)
 
     // Validate the response structure
-    if (!data.analysis || !Array.isArray(data.analysis) || !data.summary || !Array.isArray(data.summary.points)) {
+    if (!data.analysis || !Array.isArray(data.analysis) || 
+        !data.summary || !Array.isArray(data.summary.points) ||
+        !data.aiInsights) {
       throw new Error("Invalid response structure from AI model")
     }
 
@@ -258,7 +304,8 @@ function processAnalysisResponse(responseText: string): void {
     // Update the store with the results
     useAnalyzerStore.getState().setAnalysisResults(
       analysisPointsWithIds,
-      data.summary
+      data.summary,
+      data.aiInsights
     )
   } catch (error) {
     console.error("Error processing analysis response:", error)
