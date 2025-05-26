@@ -123,54 +123,54 @@ export default function InputSelector() {
     setImageUrl(null);
     setContent('');
   };
-  return <div data-unique-id="132bce0c-9f12-4120-9d10-21ef1fe5e405" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
-    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6" data-unique-id="a64d4818-df5e-4cee-8a8c-e70c31d192e5" data-file-name="components/analyzer/InputSelector.tsx">
+  return <div data-unique-id="e705457b-ae1b-4762-8dc7-f46f6b57c71c" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6" data-unique-id="fd3d5608-be3a-494e-9e1d-1e5d9e0b801a" data-file-name="components/analyzer/InputSelector.tsx">
       <MethodButton isActive={activeMethod === 'text'} onClick={() => setActiveMethod('text')} icon={<FileText />} label="Paste Text" />
       <MethodButton isActive={activeMethod === 'file'} onClick={() => setActiveMethod('file')} icon={<Upload />} label="Upload File" />
-      <MethodButton isActive={activeMethod === 'image'} onClick={() => setActiveMethod('image')} icon={<Image data-unique-id="e3fc74ef-ddb0-426b-b3bb-abb590bab2e5" data-file-name="components/analyzer/InputSelector.tsx" />} label="Upload Image" />
+      <MethodButton isActive={activeMethod === 'image'} onClick={() => setActiveMethod('image')} icon={<Image data-unique-id="39fd756d-5271-4166-8789-179a885bb21d" data-file-name="components/analyzer/InputSelector.tsx" />} label="Upload Image" />
     </div>
 
-    {activeMethod === 'text' && <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Paste your document text here..." className="w-full h-64 p-4 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" data-unique-id="c4f778f5-70a4-460a-a0bc-65f02e6ef4d1" data-file-name="components/analyzer/InputSelector.tsx" />}
+    {activeMethod === 'text' && <textarea value={content} onChange={e => setContent(e.target.value)} placeholder="Paste your document text here..." className="w-full h-64 p-4 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" data-unique-id="5df83a1c-ab5a-4904-9397-a69d06687ce0" data-file-name="components/analyzer/InputSelector.tsx" />}
 
-    {activeMethod === 'file' && <div {...getRootProps()} className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${isDragActive ? 'border-purple-500 bg-purple-50' : fileProcessingStatus === 'error' ? 'border-red-400 bg-red-50' : fileProcessingStatus === 'complete' ? 'border-green-400 bg-green-50' : 'border-purple-300 hover:border-purple-400 hover:bg-purple-50'}`} data-unique-id="53af7be2-a2fe-4c74-a9ee-79b113bc6d97" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
-      <input {...getInputProps()} data-unique-id="4a2dc794-4bed-4eb2-b5c0-d1afd8f2afe1" data-file-name="components/analyzer/InputSelector.tsx" />
+    {activeMethod === 'file' && <div {...getRootProps()} className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${isDragActive ? 'border-purple-500 bg-purple-50' : fileProcessingStatus === 'error' ? 'border-red-400 bg-red-50' : fileProcessingStatus === 'complete' ? 'border-green-400 bg-green-50' : 'border-purple-300 hover:border-purple-400 hover:bg-purple-50'}`} data-unique-id="0421f8eb-8132-41c3-b0e8-ab0ac97fc365" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+      <input {...getInputProps()} data-unique-id="abbc808b-70d4-425c-a20e-e83a84984e71" data-file-name="components/analyzer/InputSelector.tsx" />
 
       {/* Processing progress bar */}
       {processingProgress > 0 && <div className="absolute left-0 top-0 h-1 bg-purple-500" style={{
         width: `${processingProgress}%`,
         transition: 'width 0.3s ease-in-out'
-      }} data-unique-id="7981438e-7d82-402f-a7c8-53c5943338e7" data-file-name="components/analyzer/InputSelector.tsx" />}
+      }} data-unique-id="19437987-f387-4f68-8473-a6a484f5fac4" data-file-name="components/analyzer/InputSelector.tsx" />}
 
       {fileProcessingStatus === '' && <>
         <Upload className="h-10 w-10 text-purple-400 mx-auto mb-4" />
-        <p className="text-purple-700" data-unique-id="6d8850d2-440a-4386-b3f1-0112d1d16527" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="4d2d340b-ec6a-41a8-8285-c51a9c336ce9" data-file-name="components/analyzer/InputSelector.tsx">Drag & drop your T&C file here, or </span><span className="text-purple-600 font-semibold" data-unique-id="bccd77f3-445a-468e-9b70-cf212f9a0776" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="d162aa77-aeca-4b3b-a6ad-d353e1207e7b" data-file-name="components/analyzer/InputSelector.tsx">click to browse</span></span></p>
-        <p className="text-purple-400 text-sm mt-2" data-unique-id="e473b84c-130d-4431-b5fe-38b4fae1ebd6" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="09aa49e6-be77-4b12-b38f-324616eac02b" data-file-name="components/analyzer/InputSelector.tsx">Supported formats: .txt, .pdf, .doc, .docx</span></p>
+        <p className="text-purple-700" data-unique-id="9928b30f-6e49-4c8e-af2a-a27dae962553" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="4c7e17c3-1d68-4b55-9f37-cd3b9b592488" data-file-name="components/analyzer/InputSelector.tsx">Drag & drop your T&C file here, or </span><span className="text-purple-600 font-semibold" data-unique-id="8157bd9f-e4ad-403c-b7d4-239cf264edee" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="416c70c7-a445-4c03-85c7-0286f5d27a84" data-file-name="components/analyzer/InputSelector.tsx">click to browse</span></span></p>
+        <p className="text-purple-400 text-sm mt-2" data-unique-id="7b4fddfb-7f0f-4f0f-adea-61649e78b595" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="e5cca364-21ef-4bd0-ba09-72b8ccecc011" data-file-name="components/analyzer/InputSelector.tsx">Supported formats: .txt, .pdf, .doc, .docx</span></p>
       </>}
 
-      {fileProcessingStatus === 'detecting' && <div className="py-4" data-unique-id="b1a26343-3e8f-4e68-ae48-01f4d28a63ac" data-file-name="components/analyzer/InputSelector.tsx">
+      {fileProcessingStatus === 'detecting' && <div className="py-4" data-unique-id="28179afc-e967-4e10-8790-852dc048587b" data-file-name="components/analyzer/InputSelector.tsx">
         <motion.div animate={{
           rotate: 360
         }} transition={{
           duration: 1,
           repeat: Infinity,
           ease: "linear"
-        }} className="mx-auto mb-3" data-unique-id="191e33a4-d9de-4388-9419-a493dd5bda8b" data-file-name="components/analyzer/InputSelector.tsx">
+        }} className="mx-auto mb-3" data-unique-id="81f81353-8cdf-488a-929a-3a250469247e" data-file-name="components/analyzer/InputSelector.tsx">
           <Upload className="h-10 w-10 text-purple-500" />
         </motion.div>
-        <p className="text-purple-700" data-unique-id="7e724edd-446c-49c0-acf2-fee3861b9b96" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="066778e7-3de8-4866-88bf-3a07f1ff0a6a" data-file-name="components/analyzer/InputSelector.tsx">Analyzing file type...</span></p>
+        <p className="text-purple-700" data-unique-id="18f31a75-9e56-4fa9-880c-18199ebbd047" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="c6d188b5-b08f-42e1-9472-8e8beab9812b" data-file-name="components/analyzer/InputSelector.tsx">Analyzing file type...</span></p>
       </div>}
 
-      {fileProcessingStatus.startsWith('extracting') && <div className="py-4" data-unique-id="5103c2ce-b56b-4e81-8ce9-b736584a343d" data-file-name="components/analyzer/InputSelector.tsx">
+      {fileProcessingStatus.startsWith('extracting') && <div className="py-4" data-unique-id="90dc9f18-6303-42b0-a29d-358b36b0f739" data-file-name="components/analyzer/InputSelector.tsx">
         <motion.div animate={{
           scale: [1, 1.1, 1],
           opacity: [1, 0.8, 1]
         }} transition={{
           duration: 1.5,
           repeat: Infinity
-        }} className="mx-auto mb-3" data-unique-id="70770e9f-e9ea-421f-b613-23cfe40bb25b" data-file-name="components/analyzer/InputSelector.tsx">
+        }} className="mx-auto mb-3" data-unique-id="09a0c364-aefb-41e8-b2f9-e963773fb0d3" data-file-name="components/analyzer/InputSelector.tsx">
           <FileText className="h-10 w-10 text-purple-500" />
         </motion.div>
-        <p className="text-purple-700" data-unique-id="a014f45b-927a-48e5-8ec1-3c792cd3be99" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+        <p className="text-purple-700" data-unique-id="bc1f9f51-c88c-47e3-b234-b985c25b633f" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
           {fileProcessingStatus === 'extracting-pdf' && "Extracting text from PDF..."}
           {fileProcessingStatus === 'extracting-docx' && "Extracting text from DOCX..."}
           {fileProcessingStatus === 'extracting-text' && "Extracting text..."}
@@ -178,27 +178,27 @@ export default function InputSelector() {
         </p>
       </div>}
 
-      {fileProcessingStatus === 'error' && <div className="py-4 text-red-600" data-unique-id="ffe96df3-47a5-4812-b110-219e6a8a3c15" data-file-name="components/analyzer/InputSelector.tsx">
+      {fileProcessingStatus === 'error' && <div className="py-4 text-red-600" data-unique-id="5cfb8a6a-036d-4370-acd4-0d7cbc01e474" data-file-name="components/analyzer/InputSelector.tsx">
         <AlertCircle className="h-10 w-10 mx-auto mb-3" />
-        <p data-unique-id="ff1285ed-e137-4847-ab8e-4511f23a89a5" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="25bb5429-7f01-48a9-a3f9-0afd91263740" data-file-name="components/analyzer/InputSelector.tsx">Error processing file. Please try another file.</span></p>
+        <p data-unique-id="459041c6-5393-4581-b44a-1bed7fa07fcf" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="a47f68c4-f3c9-4244-97c9-b004d0495166" data-file-name="components/analyzer/InputSelector.tsx">Error processing file. Please try another file.</span></p>
       </div>}
 
       {/* Content preview */}
-      {content && activeMethod === 'file' && fileProcessingStatus !== 'detecting' && fileProcessingStatus !== 'extracting-pdf' && fileProcessingStatus !== 'extracting-docx' && fileProcessingStatus !== 'extracting-text' && <div className="mt-4 p-4 bg-white rounded-md border border-purple-200 shadow-sm" data-unique-id="b7284541-d742-4aee-aab0-c73569f42bd6" data-file-name="components/analyzer/InputSelector.tsx">
-        <div className="flex justify-between items-center mb-2" data-unique-id="966a6b6b-58ee-4759-95f3-238579aabdd1" data-file-name="components/analyzer/InputSelector.tsx">
-          <div className="flex items-center" data-unique-id="87708918-575f-4e9e-b75b-336fb0de520a" data-file-name="components/analyzer/InputSelector.tsx">
+      {content && activeMethod === 'file' && fileProcessingStatus !== 'detecting' && fileProcessingStatus !== 'extracting-pdf' && fileProcessingStatus !== 'extracting-docx' && fileProcessingStatus !== 'extracting-text' && <div className="mt-4 p-4 bg-white rounded-md border border-purple-200 shadow-sm" data-unique-id="8e352fbd-d663-4d19-9f49-704c7f049212" data-file-name="components/analyzer/InputSelector.tsx">
+        <div className="flex justify-between items-center mb-2" data-unique-id="086a9dd9-1147-418c-ba5f-93dfaf5d6c7a" data-file-name="components/analyzer/InputSelector.tsx">
+          <div className="flex items-center" data-unique-id="feffb3a5-e36f-4160-a9f1-bb8ef05170e7" data-file-name="components/analyzer/InputSelector.tsx">
             <FileText className="h-4 w-4 text-purple-500 mr-2" />
-            <span className="text-sm font-medium text-purple-700" data-unique-id="702c1b41-24ec-410d-a887-5a3f36db987c" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="984ac15a-f27a-4bc1-93f9-4898bb6237dd" data-file-name="components/analyzer/InputSelector.tsx">File content preview:</span></span>
+            <span className="text-sm font-medium text-purple-700" data-unique-id="2965aea2-d3e7-4d39-b1b3-8ad00a21a079" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="b2005368-1e8c-4c9e-8035-a36c6cb77f1a" data-file-name="components/analyzer/InputSelector.tsx">File content preview:</span></span>
           </div>
           <button onClick={e => {
             e.stopPropagation();
             setContent('');
             setFile(null);
-          }} className="text-purple-400 hover:text-purple-600 p-1" data-unique-id="72238d0c-b76d-4b6e-9a36-795264678a67" data-file-name="components/analyzer/InputSelector.tsx">
+          }} className="text-purple-400 hover:text-purple-600 p-1" data-unique-id="8ad9209f-24d2-40e7-bb7a-8d8e1d088197" data-file-name="components/analyzer/InputSelector.tsx">
             <X className="h-4 w-4" />
           </button>
         </div>
-        <div className="text-sm text-slate-600 text-left max-h-40 overflow-y-auto bg-purple-50 p-3 rounded" data-unique-id="e3967791-3670-429b-99aa-0ad598ed9c37" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+        <div className="text-sm text-slate-600 text-left max-h-40 overflow-y-auto bg-purple-50 p-3 rounded" data-unique-id="b7f0aaaf-7399-4d8b-9dd4-ec5e75af1b09" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
           {content.substring(0, 500)}
           {content.length > 500 ? '...' : ''}
         </div>
@@ -206,31 +206,31 @@ export default function InputSelector() {
     </div>}
 
     {activeMethod === 'image' && <>
-      {imageUrl ? <div className="relative" data-unique-id="5ce1a50a-1b40-4a4d-891d-cff0693b437e" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+      {imageUrl ? <div className="relative" data-unique-id="1ee18081-2ff9-45f7-8ff8-79a60e122799" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
         {/* Processing progress bar */}
         {processingProgress > 0 && <div className="absolute left-0 top-0 h-1 bg-teal-500" style={{
           width: `${processingProgress}%`,
           transition: 'width 0.3s ease-in-out'
-        }} data-unique-id="9aa1adeb-b256-4796-a4de-0b5a633df575" data-file-name="components/analyzer/InputSelector.tsx" />}
+        }} data-unique-id="6669b52d-8391-4659-b17d-6d26b60216a4" data-file-name="components/analyzer/InputSelector.tsx" />}
 
-        <button onClick={clearImage} className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md hover:bg-slate-50 z-10" data-unique-id="acac39f5-5990-4e4e-9932-8a8c2240c0c6" data-file-name="components/analyzer/InputSelector.tsx">
+        <button onClick={clearImage} className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md hover:bg-slate-50 z-10" data-unique-id="e4b0c8a2-097d-4e5a-80c4-4a8091b98e23" data-file-name="components/analyzer/InputSelector.tsx">
           <X className="h-5 w-5 text-teal-600" />
         </button>
 
-        <img src={imageUrl} alt="Uploaded T&C" className="w-full max-h-64 object-contain rounded-md border border-teal-200 shadow-sm" data-unique-id="a14ddb0d-f2ab-4af4-8755-287afc84925a" data-file-name="components/analyzer/InputSelector.tsx" />
+        <img src={imageUrl} alt="Uploaded T&C" className="w-full max-h-64 object-contain rounded-md border border-teal-200 shadow-sm" data-unique-id="7b4ac8bf-19c9-4bf0-ba72-109c22ba42cd" data-file-name="components/analyzer/InputSelector.tsx" />
 
-        {fileProcessingStatus === 'extracting-image' && <div className="absolute inset-0 flex items-center justify-center bg-teal-900/30 rounded-md" data-unique-id="4ffd5e10-6503-4d14-92ad-a969d1a14c87" data-file-name="components/analyzer/InputSelector.tsx">
-          <div className="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-3" data-unique-id="2b23f3ff-2343-43a1-9cfb-1ac0bb185bb6" data-file-name="components/analyzer/InputSelector.tsx">
+        {fileProcessingStatus === 'extracting-image' && <div className="absolute inset-0 flex items-center justify-center bg-teal-900/30 rounded-md" data-unique-id="95af82cd-a8c8-483c-b745-fab7e037cff9" data-file-name="components/analyzer/InputSelector.tsx">
+          <div className="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-3" data-unique-id="2f22a328-784f-446a-8af0-a6240478fdae" data-file-name="components/analyzer/InputSelector.tsx">
             <motion.div animate={{
               rotate: 360
             }} transition={{
               duration: 1.5,
               repeat: Infinity,
               ease: "linear"
-            }} data-unique-id="ec5de62c-60e4-40cf-b232-1bd95cbc754e" data-file-name="components/analyzer/InputSelector.tsx">
-              <Image className="h-6 w-6 text-teal-500" data-unique-id="22d7c17e-198d-40f9-875f-ddccdaf4acc1" data-file-name="components/analyzer/InputSelector.tsx" />
+            }} data-unique-id="ac1756c0-3edc-4adb-90a7-05ab7f9139b5" data-file-name="components/analyzer/InputSelector.tsx">
+              <Image className="h-6 w-6 text-teal-500" data-unique-id="236e12a9-fbed-4ec1-a847-286401d3bc28" data-file-name="components/analyzer/InputSelector.tsx" />
             </motion.div>
-            <span className="text-teal-700 font-medium" data-unique-id="1437dbd8-aed5-4568-8945-fc48798a25e6" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="4f960ab0-3b97-4e4e-b8ea-fafd965720e7" data-file-name="components/analyzer/InputSelector.tsx">Extracting text...</span></span>
+            <span className="text-teal-700 font-medium" data-unique-id="6ff645eb-4c2e-4719-9925-0a3c54a8b497" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="18235581-c08c-480f-9ecb-538d5e201b02" data-file-name="components/analyzer/InputSelector.tsx">Extracting text...</span></span>
           </div>
         </div>}
 
@@ -242,26 +242,26 @@ export default function InputSelector() {
           y: 0
         }} transition={{
           duration: 0.3
-        }} className="mt-4 p-4 bg-white rounded-md border border-teal-200 shadow-sm" data-unique-id="4302fcef-97bb-412b-8e11-2b9d5668eb1c" data-file-name="components/analyzer/InputSelector.tsx">
-          <div className="flex items-center mb-2" data-unique-id="af4dcc66-4ead-4b6e-9b22-a6bc852567db" data-file-name="components/analyzer/InputSelector.tsx">
+        }} className="mt-4 p-4 bg-white rounded-md border border-teal-200 shadow-sm" data-unique-id="2178cfbf-d0f6-428d-b3d3-bc148c3572fe" data-file-name="components/analyzer/InputSelector.tsx">
+          <div className="flex items-center mb-2" data-unique-id="34c922ea-f006-4be5-9617-19ec14b68fe2" data-file-name="components/analyzer/InputSelector.tsx">
             <FileText className="h-4 w-4 text-teal-500 mr-2" />
-            <span className="text-sm font-medium text-teal-700" data-unique-id="bc92889b-1a68-40c0-967b-0dd5f896ab60" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="c9a4bc86-4b57-40fb-b8fb-756c5b2849ec" data-file-name="components/analyzer/InputSelector.tsx">Extracted text preview:</span></span>
+            <span className="text-sm font-medium text-teal-700" data-unique-id="66f8cae0-c5c9-4fef-a721-61076fc00419" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="651dda93-685e-4517-9233-6397db9e7683" data-file-name="components/analyzer/InputSelector.tsx">Extracted text preview:</span></span>
           </div>
-          <div className="text-sm text-slate-600 max-h-40 overflow-y-auto bg-teal-50 p-3 rounded" data-unique-id="ce9d3b18-ef8e-4d72-bf8a-67b31916f739" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+          <div className="text-sm text-slate-600 max-h-40 overflow-y-auto bg-teal-50 p-3 rounded" data-unique-id="a8ade1d3-7e85-403c-a3ab-a5bfd4172735" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
             {content.substring(0, 500)}
             {content.length > 500 ? '...' : ''}
           </div>
         </motion.div>}
-      </div> : <div {...getRootProps()} className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${isDragActive ? 'border-teal-500 bg-teal-50' : fileProcessingStatus === 'error' ? 'border-red-400 bg-red-50' : 'border-teal-300 hover:border-teal-400 hover:bg-teal-50'}`} data-unique-id="a7c0c386-c40c-4155-9fa2-4d5814873377" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
-        <input {...getInputProps()} data-unique-id="0b07ce5e-999f-4067-aa5a-b517ed40e206" data-file-name="components/analyzer/InputSelector.tsx" />
-        <Image className="h-10 w-10 text-teal-400 mx-auto mb-4" data-unique-id="af157db6-ae1a-4493-9e4b-d0a1ff7ee175" data-file-name="components/analyzer/InputSelector.tsx" />
-        <p className="text-teal-700" data-unique-id="e4c685a8-e184-4ab3-8aaf-36411ac60061" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="bc406e6c-3607-4514-9c00-fbc4a8a028da" data-file-name="components/analyzer/InputSelector.tsx">Drag & drop an image with T&C text, or </span><span className="text-teal-600 font-semibold" data-unique-id="9f228c30-b9c3-4ff0-bbcc-60ad6f867508" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="78eb0087-4b5f-46d5-8e40-871e2a84ca27" data-file-name="components/analyzer/InputSelector.tsx">click to browse</span></span></p>
-        <p className="text-teal-400 text-sm mt-2" data-unique-id="8ba86040-2b2e-497b-8cfa-07c1274155ee" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="f4fd3a4d-c5ae-4af5-ae86-420fd02a122c" data-file-name="components/analyzer/InputSelector.tsx">Supported formats: .png, .jpg, .jpeg</span></p>
+      </div> : <div {...getRootProps()} className={`relative border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${isDragActive ? 'border-teal-500 bg-teal-50' : fileProcessingStatus === 'error' ? 'border-red-400 bg-red-50' : 'border-teal-300 hover:border-teal-400 hover:bg-teal-50'}`} data-unique-id="0f2a77c7-ebd1-44cb-ae6f-7c41642aadf2" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+        <input {...getInputProps()} data-unique-id="74deaea5-6cd6-475a-8e33-50592ea50eb8" data-file-name="components/analyzer/InputSelector.tsx" />
+        <Image className="h-10 w-10 text-teal-400 mx-auto mb-4" data-unique-id="7c249824-117b-4ef5-8dee-2e6efd14815f" data-file-name="components/analyzer/InputSelector.tsx" />
+        <p className="text-teal-700" data-unique-id="25effe1e-a627-4302-97ea-868f24b30788" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="7b5c0ae2-7317-4d6c-a6af-3eddf7123c0e" data-file-name="components/analyzer/InputSelector.tsx">Drag & drop an image with T&C text, or </span><span className="text-teal-600 font-semibold" data-unique-id="d3225302-db60-415d-98ed-a0f24b88ea5f" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="33d8b2b0-0de9-4ef4-91e5-02d39efbcc91" data-file-name="components/analyzer/InputSelector.tsx">click to browse</span></span></p>
+        <p className="text-teal-400 text-sm mt-2" data-unique-id="3f7b2040-b67f-45e7-a6c6-8fcf7cb3ec53" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="e7902d60-aa28-451b-9dfc-927e26aceba3" data-file-name="components/analyzer/InputSelector.tsx">Supported formats: .png, .jpg, .jpeg</span></p>
 
-        {fileProcessingStatus === 'error' && <div className="absolute inset-0 flex items-center justify-center bg-red-900/10 rounded-md" data-unique-id="b7920337-7875-4941-91b3-fcbd5de687ee" data-file-name="components/analyzer/InputSelector.tsx">
-          <div className="bg-white p-4 rounded-lg shadow-lg text-red-600" data-unique-id="42651cc2-63a7-42f5-a80e-d3d8a84bc782" data-file-name="components/analyzer/InputSelector.tsx">
+        {fileProcessingStatus === 'error' && <div className="absolute inset-0 flex items-center justify-center bg-red-900/10 rounded-md" data-unique-id="5a559401-035d-4ee1-96e4-39874483191f" data-file-name="components/analyzer/InputSelector.tsx">
+          <div className="bg-white p-4 rounded-lg shadow-lg text-red-600" data-unique-id="891b2b06-5d71-49f5-92ff-403e1c3d5321" data-file-name="components/analyzer/InputSelector.tsx">
             <AlertCircle className="h-6 w-6 mx-auto mb-2" />
-            <p className="text-sm" data-unique-id="e0a29760-5045-4801-95da-2007cb141333" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="47904d96-d0e9-499e-a643-1bcbf8445f44" data-file-name="components/analyzer/InputSelector.tsx">Error processing image. Please try another file.</span></p>
+            <p className="text-sm" data-unique-id="fd2ad07e-7dfe-4aa1-8f01-98a952b6a666" data-file-name="components/analyzer/InputSelector.tsx"><span className="editable-text" data-unique-id="095d5374-4287-4d03-aea8-5be1fc88faa4" data-file-name="components/analyzer/InputSelector.tsx">Error processing image. Please try another file.</span></p>
           </div>
         </div>}
       </div>}
@@ -283,15 +283,15 @@ function MethodButton({
     scale: 0.97
   }} whileHover={{
     scale: 1.02
-  }} className={`flex-1 py-3 md:py-4 rounded-lg flex flex-col items-center justify-center gap-2 transition-all ${isActive ? 'bg-gradient-to-br from-blue-100 to-purple-100 text-blue-700 border-2 border-blue-200 shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-200 hover:shadow-sm'}`} data-unique-id="a3dd6101-dcf0-4cb7-9392-6e212fe5a0e6" data-file-name="components/analyzer/InputSelector.tsx">
+  }} className={`flex-1 py-3 md:py-4 rounded-lg flex flex-col items-center justify-center gap-2 transition-all ${isActive ? 'bg-gradient-to-br from-blue-100 to-purple-100 text-blue-700 border-2 border-blue-200 shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-200 hover:shadow-sm'}`} data-unique-id="96a19347-9e4a-40b2-81b5-d4696bd061f5" data-file-name="components/analyzer/InputSelector.tsx">
     <motion.div animate={isActive ? {
       scale: [1, 1.15, 1],
       rotate: [0, 5, -5, 0]
     } : {}} transition={{
       duration: 0.5
-    }} data-unique-id="4047b7bd-e3e1-4367-aa50-9beb6a71eae3" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
+    }} data-unique-id="49167f68-1667-4c86-82dd-9d37940aef2e" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">
       {icon}
     </motion.div>
-    <span className="text-sm font-medium" data-unique-id="faad1af1-79d1-4689-9645-3a22ef5e28d1" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">{label}</span>
+    <span className="text-sm font-medium" data-unique-id="e38edfcb-dde3-4ee5-b55b-90866438feea" data-file-name="components/analyzer/InputSelector.tsx" data-dynamic-text="true">{label}</span>
   </motion.button>;
 }

@@ -20,12 +20,12 @@ export default function AIInsights() {
     }));
   };
   if (!aiInsights) {
-    return <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center" data-unique-id="bd23603a-bcf1-4353-8461-9254e6a472bc" data-file-name="components/analyzer/AIInsights.tsx">
+    return <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center" data-unique-id="a5f7952f-f473-47aa-822f-29b0d784fd2c" data-file-name="components/analyzer/AIInsights.tsx">
         <Sparkles className="h-10 w-10 text-blue-500 mx-auto mb-3" />
-        <p className="text-blue-700" data-unique-id="eab84ea0-2374-4ff3-8a14-86aeebee0d25" data-file-name="components/analyzer/AIInsights.tsx"><span className="editable-text" data-unique-id="a4ffa530-308a-41b7-9934-60a0ed003ebb" data-file-name="components/analyzer/AIInsights.tsx">AI insights will appear here after analysis is complete.</span></p>
+        <p className="text-blue-700" data-unique-id="9b0c1641-a722-4f98-9142-e0d648809abc" data-file-name="components/analyzer/AIInsights.tsx"><span className="editable-text" data-unique-id="5c4fa416-752b-4321-954a-43b127fa366d" data-file-name="components/analyzer/AIInsights.tsx">AI insights will appear here after analysis is complete.</span></p>
       </div>;
   }
-  return <div className="space-y-6" data-unique-id="c907f354-e207-4737-90d2-9f2174666d79" data-file-name="components/analyzer/AIInsights.tsx">
+  return <div className="space-y-6" data-unique-id="4a047c48-31b3-49f0-a47d-06b9f692e1f1" data-file-name="components/analyzer/AIInsights.tsx">
       <InsightSection title="AI Suggestions" icon={<Lightbulb className="h-5 w-5 text-amber-500" />} items={aiInsights.suggestions} isExpanded={expandedSections.suggestions} onToggle={() => toggleSection('suggestions')} color="amber" />
       
       <InsightSection title="Potential Risks" icon={<AlertTriangle className="h-5 w-5 text-red-500" />} items={aiInsights.risks} isExpanded={expandedSections.risks} onToggle={() => toggleSection('risks')} color="red" />
@@ -79,15 +79,15 @@ function InsightSection({
   }} animate={{
     opacity: 1,
     y: 0
-  }} className={`${style.bg} border ${style.border} rounded-lg overflow-hidden shadow-sm`} data-unique-id="88ec842e-af03-4960-bec7-c21ba773a1f4" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
-      <div className={`p-4 flex justify-between items-center cursor-pointer ${style.hover}`} onClick={onToggle} data-unique-id="3a6d8459-f466-417c-b7c5-7f3f8a754493" data-file-name="components/analyzer/AIInsights.tsx">
-        <div className="flex items-center space-x-3" data-unique-id="0144ce42-38ea-4091-b151-96e30920ea3d" data-file-name="components/analyzer/AIInsights.tsx">
-          <div className={`p-2 ${style.iconBg} rounded-lg`} data-unique-id="5695ca97-c681-4ccb-81e1-f62dc7b68bd3" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
+  }} className={`${style.bg} border ${style.border} rounded-lg overflow-hidden shadow-sm`} data-unique-id="fedeebb0-30fd-4be0-b681-a1b74ea68d08" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
+      <div className={`p-4 flex justify-between items-center cursor-pointer ${style.hover}`} onClick={onToggle} data-unique-id="7b2255be-9cd4-4c93-80d1-252624a91894" data-file-name="components/analyzer/AIInsights.tsx">
+        <div className="flex items-center space-x-3" data-unique-id="7be2fd44-f4e6-4f6a-aad5-d5f8545f03ea" data-file-name="components/analyzer/AIInsights.tsx">
+          <div className={`p-2 ${style.iconBg} rounded-lg`} data-unique-id="5813680c-0b42-4f2d-9398-25c7f6608b08" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
             {icon}
           </div>
-          <h3 className={`font-medium ${style.text}`} data-unique-id="147f8479-54f5-41c2-be19-81c291fe735a" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">{title}</h3>
+          <h3 className={`font-medium ${style.text}`} data-unique-id="88b9c3aa-9bc4-4b41-9797-89508c2f108d" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">{title}</h3>
         </div>
-        <button className={`p-1 ${style.text} rounded-full ${style.hover}`} data-unique-id="3beaefc0-a99a-455b-ad29-a0decf4f6b55" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
+        <button className={`p-1 ${style.text} rounded-full ${style.hover}`} data-unique-id="2982752a-7029-4c5b-bbc9-909ae4cfba2e" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
           {isExpanded ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
         </button>
       </div>
@@ -103,8 +103,8 @@ function InsightSection({
       height: 0
     }} transition={{
       duration: 0.3
-    }} className="px-4 pb-4" data-unique-id="852c3dba-ecc7-46c7-824d-aa483fde7fc2" data-file-name="components/analyzer/AIInsights.tsx">
-          <ul className="space-y-2 mt-2" data-unique-id="9ce9fd66-20ac-4be0-9ca3-75aa2b71b145" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
+    }} className="px-4 pb-4" data-unique-id="5527ff2e-c64f-47d9-a5a4-93fe45ce9e5e" data-file-name="components/analyzer/AIInsights.tsx">
+          <ul className="space-y-2 mt-2" data-unique-id="8508dbfd-0975-455f-9459-4cc8b54e33fb" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">
             {items.map((item, index) => <motion.li key={index} initial={{
           opacity: 0,
           x: -5
@@ -113,9 +113,9 @@ function InsightSection({
           x: 0
         }} transition={{
           delay: index * 0.1
-        }} className={`flex items-start ${style.text}`} data-unique-id="33992b0f-53e5-4b77-8ada-6a2acf16ab7c" data-file-name="components/analyzer/AIInsights.tsx">
-                <span className="mr-2 mt-1" data-unique-id="ba81fe9f-48f8-4e75-8c7d-49d783cdfcd4" data-file-name="components/analyzer/AIInsights.tsx"><span className="editable-text" data-unique-id="dea47c19-5c23-4447-9774-fe5fc2cda7de" data-file-name="components/analyzer/AIInsights.tsx">•</span></span>
-                <span data-unique-id="226e7696-f1ca-4c21-9da0-5246fd9d71a5" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">{item}</span>
+        }} className={`flex items-start ${style.text}`} data-unique-id="a1dd214a-39c9-4248-b18a-518a2d31a171" data-file-name="components/analyzer/AIInsights.tsx">
+                <span className="mr-2 mt-1" data-unique-id="fd9b176a-ca00-402a-8767-5eaac026d702" data-file-name="components/analyzer/AIInsights.tsx"><span className="editable-text" data-unique-id="a68cfa6d-4ae3-4378-9096-0f39a16775c5" data-file-name="components/analyzer/AIInsights.tsx">•</span></span>
+                <span data-unique-id="3aae6716-c5b1-4974-9d9d-c921899d45d3" data-file-name="components/analyzer/AIInsights.tsx" data-dynamic-text="true">{item}</span>
               </motion.li>)}
           </ul>
         </motion.div>}
