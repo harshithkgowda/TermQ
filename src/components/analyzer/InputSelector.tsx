@@ -299,7 +299,6 @@ export default function InputSelector() {
         </>}
     </div>;
 }
-import { AlertCircle, FileText, Upload, Image, X } from 'lucide-react';
 import { extractTextFromImage, extractTextFromPDF, extractTextFromDOCX, getFileType } from '@/lib/analyzer';
 
 function MethodButton({

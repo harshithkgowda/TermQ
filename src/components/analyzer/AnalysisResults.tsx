@@ -21,16 +21,16 @@ export default function AnalysisResults() {
     acc[point.type] = (acc[point.type] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
-  return <div data-unique-id="70452027-22c2-4580-af51-17543467a4e8" data-file-name="components/analyzer/AnalysisResults.tsx">
-      <h2 className="text-2xl font-semibold text-slate-800 mb-6" data-unique-id="40adc6c0-af2f-47e8-b5a3-9beb8adf98d9" data-file-name="components/analyzer/AnalysisResults.tsx"><span className="editable-text" data-unique-id="70af148f-0d5d-4e80-9ed7-1be9bd7766f8" data-file-name="components/analyzer/AnalysisResults.tsx">Analysis Results</span></h2>
+  return <div data-unique-id="20e6a675-e4fd-4106-8830-c79a71a9e889" data-file-name="components/analyzer/AnalysisResults.tsx">
+      <h2 className="text-2xl font-semibold text-slate-800 mb-6" data-unique-id="9a46bda3-12a5-42bf-a5d5-a489cf3b6057" data-file-name="components/analyzer/AnalysisResults.tsx"><span className="editable-text" data-unique-id="64566c0b-d7fd-4d77-a7a8-f381250b6077" data-file-name="components/analyzer/AnalysisResults.tsx">Analysis Results</span></h2>
       
-      <div className="grid grid-cols-3 gap-6 mb-8" data-unique-id="54b224b7-04ba-488a-bcae-0306d1a756e6" data-file-name="components/analyzer/AnalysisResults.tsx">
+      <div className="grid grid-cols-3 gap-6 mb-8" data-unique-id="0ec60b4b-3965-4c18-80fb-f4bda2df1102" data-file-name="components/analyzer/AnalysisResults.tsx">
         <StatCard count={counts.harmful || 0} label="Harmful Points" color="bg-gradient-to-br from-red-100 to-rose-100 text-red-700 border-red-200" icon={<AlertCircle className="h-6 w-6" />} />
         <StatCard count={counts.good || 0} label="Good Points" color="bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700 border-emerald-200" icon={<CheckCircle className="h-6 w-6" />} />
         <StatCard count={counts.awareness || 0} label="Awareness Points" color="bg-gradient-to-br from-amber-100 to-yellow-100 text-amber-700 border-amber-200" icon={<Info className="h-6 w-6" />} />
       </div>
       
-      <div className="space-y-3" data-unique-id="c30e0072-5cf9-4587-8878-174bd067c43f" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+      <div className="space-y-3" data-unique-id="2855dbd0-52df-41be-acd7-79bc5e6bdf1b" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
         {analysisPoints.map(point => <AnalysisPointCard key={point.id} point={point} isExpanded={!!expandedItems[point.id]} onToggle={() => toggleItem(point.id)} />)}
       </div>
     </div>;
@@ -52,13 +52,13 @@ function StatCard({
   }} animate={{
     opacity: 1,
     y: 0
-  }} className={`${color} rounded-lg p-4 flex items-center`} data-unique-id="38f7fa10-7f83-4f19-990f-092b2eedd39d" data-file-name="components/analyzer/AnalysisResults.tsx">
-      <div className="mr-4" data-unique-id="31914b07-d8d0-48dc-b35a-c2ccf8cc5637" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+  }} className={`${color} rounded-lg p-4 flex items-center`} data-unique-id="015e437d-6539-431a-89ec-8d6e57d8f40d" data-file-name="components/analyzer/AnalysisResults.tsx">
+      <div className="mr-4" data-unique-id="5d0eadbe-d8c0-4676-a9ad-f3f58e00ce92" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
         {icon}
       </div>
-      <div data-unique-id="552df012-f56e-40ed-b069-f88907079190" data-file-name="components/analyzer/AnalysisResults.tsx">
-        <span className="text-2xl font-bold" data-unique-id="72fbdd57-af96-4d2b-a2dd-efc8933351b8" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">{count}</span>
-        <p className="text-sm" data-unique-id="97451417-0ce3-4e7b-870e-ba283f8120a3" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">{label}</p>
+      <div data-unique-id="f0784bea-00bc-413d-96be-c5bbd6d9eeee" data-file-name="components/analyzer/AnalysisResults.tsx">
+        <span className="text-2xl font-bold" data-unique-id="a778f806-476b-4307-b976-0296e5bd138a" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">{count}</span>
+        <p className="text-sm" data-unique-id="0feadb06-cf8a-4c79-9ea4-49d605994745" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">{label}</p>
       </div>
     </motion.div>;
 }
@@ -106,13 +106,13 @@ function AnalysisPointCard({
     y: 0
   }} transition={{
     duration: 0.4
-  }} className={`bg-gradient-to-br ${style.gradient} border ${style.border} rounded-lg overflow-hidden shadow-sm ${style.shadow} mb-4`} data-unique-id="be66d41f-fcef-4ad7-8258-12a248996862" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
-      <div className="p-5 flex justify-between items-center cursor-pointer" onClick={onToggle} data-unique-id="2815226b-bce4-468a-a937-c5df3cbdeb5b" data-file-name="components/analyzer/AnalysisResults.tsx">
-        <div className="flex items-center space-x-3" data-unique-id="24d6e2c5-2ea4-4bb6-ba95-83304aff1d36" data-file-name="components/analyzer/AnalysisResults.tsx">
-          <div className="p-2 bg-white rounded-lg shadow-inner" data-unique-id="a66f8cdd-b0fc-4e46-8814-50835268156d" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+  }} className={`bg-gradient-to-br ${style.gradient} border ${style.border} rounded-lg overflow-hidden shadow-sm ${style.shadow} mb-4`} data-unique-id="5a0944e8-50ec-4116-a267-ef97fc5aeefc" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+      <div className="p-5 flex justify-between items-center cursor-pointer" onClick={onToggle} data-unique-id="2e6efd96-0437-4045-a8dc-28be9f9be052" data-file-name="components/analyzer/AnalysisResults.tsx">
+        <div className="flex items-center space-x-3" data-unique-id="1e4c036b-58a7-433f-b639-65dd6ce60420" data-file-name="components/analyzer/AnalysisResults.tsx">
+          <div className="p-2 bg-white rounded-lg shadow-inner" data-unique-id="153b5042-4b31-4d30-9889-c262fea93a52" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
             {style.icon}
           </div>
-          <div className={`${style.text} font-medium`} data-unique-id="e849b8c0-b2d8-4499-89ab-1f62bdbea64f" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+          <div className={`${style.text} font-medium`} data-unique-id="1be61b9f-cbeb-4ad9-93aa-c7c493da4008" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
             {point.text}
           </div>
         </div>
@@ -120,7 +120,7 @@ function AnalysisPointCard({
         scale: 0.9
       }} whileHover={{
         scale: 1.1
-      }} data-unique-id="bddb9c77-f527-468f-9eae-b2da080e9309" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+      }} data-unique-id="c90e27c7-b778-412c-87c4-1bcf0b722629" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
           {isExpanded ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
         </motion.button>
       </div>
@@ -138,8 +138,8 @@ function AnalysisPointCard({
       duration: 0.3
     }} className="border-t border-dashed px-5 py-4 bg-white/50" style={{
       borderColor: style.border
-    }} data-unique-id="8036c412-f329-40be-97a8-e27de323d2d6" data-file-name="components/analyzer/AnalysisResults.tsx">
-          <p className={`${style.text} leading-relaxed`} data-unique-id="6e9db7c1-cb43-40f2-89cb-3234bd8e35e9" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
+    }} data-unique-id="f59eab2b-4d10-4ebc-ba46-4bab7269bb8f" data-file-name="components/analyzer/AnalysisResults.tsx">
+          <p className={`${style.text} leading-relaxed`} data-unique-id="57985877-379a-4a48-b2b6-6d8f7409464a" data-file-name="components/analyzer/AnalysisResults.tsx" data-dynamic-text="true">
             {point.explanation}
           </p>
         </motion.div>}
