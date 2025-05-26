@@ -100,6 +100,40 @@ export async function analyzeContent(): Promise<void> {
   }
 }
 
+// Function to compare two documents and highlight differences
+export async function compareDocuments(doc1Content: string, doc2Content: string): Promise<string> {
+  // This is a placeholder for a more sophisticated diff algorithm
+  // In a real implementation, you might use a more advanced diffing library
+  
+  const provider = "azure-gpt-4o"
+  
+  const comparisonPrompt = `
+    Compare these two Terms & Conditions documents and identify the key differences.
+    Focus on changes that affect:
+    1. User rights and obligations
+    2. Company rights and obligations
+    3. Privacy policies
+    4. Data usage
+    5. Termination conditions
+    
+    Format your response as a structured list of differences, with clear references to which document contains each clause.
+    
+    DOCUMENT 1:
+    ${doc1Content.substring(0, 7500)}
+    
+    DOCUMENT 2:
+    ${doc2Content.substring(0, 7500)}
+  `
+  
+  try {
+    const result = await generateText(comparisonPrompt, provider)
+    return result.text
+  } catch (error) {
+    console.error("Error comparing documents:", error)
+    throw new Error("Failed to compare documents. Please try again.")
+  }
+}
+
 // Analyze using text-only model
 async function analyzeWithText(content: string): Promise<void> {
   const store = useAnalyzerStore.getState()
