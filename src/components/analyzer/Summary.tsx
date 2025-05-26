@@ -51,28 +51,28 @@ export default function Summary() {
       y: 0
     }
   };
-  return <div data-unique-id="dfabdb4a-6f44-496d-83b6-9dd4ef1b317a" data-file-name="components/analyzer/Summary.tsx">
-      <div className="flex justify-between items-center mb-6" data-unique-id="87fdf624-0d3a-401a-b590-0dc5739c4a9b" data-file-name="components/analyzer/Summary.tsx">
-        <h2 className="text-2xl font-semibold text-slate-800" data-unique-id="8a5d8e1c-03f1-4c14-a342-f0f22a69797d" data-file-name="components/analyzer/Summary.tsx"><span className="editable-text" data-unique-id="8546eddd-6735-4043-861e-17b0cc7049b6" data-file-name="components/analyzer/Summary.tsx">Summary</span></h2>
+  return <div data-unique-id="16a0dc53-d16d-4895-a5fc-f945250092ca" data-file-name="components/analyzer/Summary.tsx">
+      <div className="flex justify-between items-center mb-6" data-unique-id="8ad6dde4-6c3a-4c36-97c9-94ac6ae1d2dc" data-file-name="components/analyzer/Summary.tsx">
+        <h2 className="text-2xl font-semibold text-slate-800" data-unique-id="32be1656-4003-4af6-a120-2387e2dfdd87" data-file-name="components/analyzer/Summary.tsx"><span className="editable-text" data-unique-id="a24d6904-10de-4be1-8ec4-72cc8fc934a9" data-file-name="components/analyzer/Summary.tsx">Summary</span></h2>
         
-        <div className="flex space-x-2" data-unique-id="543b1f27-6938-4145-9eac-e3ceb2fc597a" data-file-name="components/analyzer/Summary.tsx">
-          <button onClick={copyToClipboard} className="flex items-center gap-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-md text-slate-700 text-sm transition-colors" data-unique-id="55cb156f-c5c4-4525-aa2c-77a30788107d" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">
+        <div className="flex space-x-2" data-unique-id="0b107ce4-ce8c-4efd-afc8-1d63e2f6ce99" data-file-name="components/analyzer/Summary.tsx">
+          <button onClick={copyToClipboard} className="flex items-center gap-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-md text-slate-700 text-sm transition-colors" data-unique-id="f13d02bc-e076-4f5d-932b-59d15d569cc6" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">
             <Clipboard className="h-4 w-4" />
             {copied ? "Copied!" : "Copy"}
           </button>
           
-          <button onClick={downloadSummary} className="flex items-center gap-1 px-3 py-1.5 bg-indigo-100 hover:bg-indigo-200 rounded-md text-indigo-700 text-sm transition-colors" data-unique-id="9393a7c9-644e-430c-afe4-fa7e2a145d78" data-file-name="components/analyzer/Summary.tsx">
-            <Download className="h-4 w-4" /><span className="editable-text" data-unique-id="6d896104-2211-450e-930d-7a34a628cd10" data-file-name="components/analyzer/Summary.tsx">
+          <button onClick={downloadSummary} className="flex items-center gap-1 px-3 py-1.5 bg-indigo-100 hover:bg-indigo-200 rounded-md text-indigo-700 text-sm transition-colors" data-unique-id="8ba8eaa9-3c6b-4941-bc29-e3febab45372" data-file-name="components/analyzer/Summary.tsx">
+            <Download className="h-4 w-4" /><span className="editable-text" data-unique-id="d6ef6141-cf8c-48aa-adf5-6271c30bbdd0" data-file-name="components/analyzer/Summary.tsx">
             Download
           </span></button>
         </div>
       </div>
       
-      <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-100" data-unique-id="5f6baedf-c3fd-4f15-b28d-555629063002" data-file-name="components/analyzer/Summary.tsx">
-        <motion.ul className="space-y-4" variants={container} initial="hidden" animate="show" data-unique-id="d81df0a4-877e-4a96-91bc-cbafb9cc0273" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">
-          {summary.points.map((point, index) => <motion.li key={index} variants={item} className="flex" data-unique-id="6a004bec-f392-4f82-9f2b-350564503b20" data-file-name="components/analyzer/Summary.tsx">
-              <span className="text-indigo-700 font-bold mr-2" data-unique-id="92c5c396-afd3-4dcd-8ec1-1d17b0a5546b" data-file-name="components/analyzer/Summary.tsx"><span className="editable-text" data-unique-id="2e72a762-665d-46cf-ab3b-1867595b8337" data-file-name="components/analyzer/Summary.tsx">•</span></span>
-              <span className="text-slate-800" data-unique-id="b204b135-ae99-44c2-bd34-c55acb741d6b" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">{point}</span>
+      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-8 rounded-xl border border-purple-100 shadow-md" data-unique-id="44e8885e-6473-41d8-bac2-9b01b2600da7" data-file-name="components/analyzer/Summary.tsx">
+        <motion.ul className="space-y-5" variants={container} initial="hidden" animate="show" data-unique-id="a7fc4a88-8361-49db-8370-833f3e18f316" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">
+          {summary.points.map((point, index) => <motion.li key={index} variants={item} className="flex bg-white/70 p-4 rounded-lg border border-purple-100 shadow-sm" data-unique-id="fb19c39e-e8ca-478b-b70e-fdb15a58c79e" data-file-name="components/analyzer/Summary.tsx">
+              <span className="text-purple-700 font-bold mr-3 flex-shrink-0" data-unique-id="2991d66f-10c6-4dde-b9b1-a0ea024acfa2" data-file-name="components/analyzer/Summary.tsx"><span className="editable-text" data-unique-id="d7be9ae5-0b18-4f7a-991d-8362d8260396" data-file-name="components/analyzer/Summary.tsx">•</span></span>
+              <span className="text-slate-800" data-unique-id="f534cf96-6f5c-440e-b42c-bccfa04e4fac" data-file-name="components/analyzer/Summary.tsx" data-dynamic-text="true">{point}</span>
             </motion.li>)}
         </motion.ul>
       </div>

@@ -3,6 +3,13 @@
 import { createWorker } from 'tesseract.js'
 import { useAnalyzerStore } from '@/store/useAnalyzerStore'
 import { generateText, generateTextWithImages } from '@/lib/api/util'
+import * as pdfjs from 'pdfjs-dist'
+import mammoth from 'mammoth'
+import * as fileType from 'file-type'
+
+// Configure PDF.js worker
+const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.mjs')
+pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 
 // Function to extract text from an image
 export async function extractTextFromImage(imageUrl: string): Promise<string> {
@@ -14,6 +21,55 @@ export async function extractTextFromImage(imageUrl: string): Promise<string> {
   } finally {
     await worker.terminate()
   }
+}
+
+// Function to extract text from PDF
+export async function extractTextFromPDF(file: File): Promise<string> {
+  // Convert File to ArrayBuffer
+  const arrayBuffer = await file.arrayBuffer()
+  
+  // Load the PDF document
+  const loadingTask = pdfjs.getDocument({ data: new Uint8Array(arrayBuffer) })
+  const pdf = await loadingTask.promise
+  
+  let fullText = ''
+  
+  // Iterate through each page to extract text
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i)
+    const textContent = await page.getTextContent()
+    const pageText = textContent.items.map((item: any) => item.str).join(' ')
+    fullText += pageText + '\n\n'
+  }
+  
+  return fullText
+}
+
+// Function to extract text from DOCX
+export async function extractTextFromDOCX(file: File): Promise<string> {
+  const arrayBuffer = await file.arrayBuffer()
+  const result = await mammoth.extractRawText({ arrayBuffer })
+  return result.value
+}
+
+// Function to detect file type
+export async function getFileType(file: File): Promise<string> {
+  // First check by extension
+  const extension = file.name.split('.').pop()?.toLowerCase()
+  
+  if (extension === 'pdf') return 'pdf'
+  if (extension === 'docx' || extension === 'doc') return 'docx'
+  if (extension === 'txt') return 'txt'
+  
+  // If extension is not conclusive, try to detect by content
+  const arrayBuffer = await file.slice(0, 4100).arrayBuffer()
+  const type = await fileType.fileTypeFromBuffer(new Uint8Array(arrayBuffer))
+  
+  if (type?.mime.includes('pdf')) return 'pdf'
+  if (type?.mime.includes('word') || type?.mime.includes('officedocument')) return 'docx'
+  if (type?.mime.includes('text')) return 'txt'
+  
+  return 'unknown'
 }
 
 // Function to analyze the T&C content
