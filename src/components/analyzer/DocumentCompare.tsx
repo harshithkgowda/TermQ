@@ -82,19 +82,19 @@ export default function DocumentCompare() {
 
   // If we don't have 2 documents to compare
   if (!doc1 || !doc2) {
-    return <div className="text-center py-12 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="47f3ab50-7866-42c3-9781-62468079666e" data-file-name="components/analyzer/DocumentCompare.tsx">
+    return <div className="text-center py-12 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="8fcd3ce2-44ad-4b88-ae7c-093118309386" data-file-name="components/analyzer/DocumentCompare.tsx">
         <ArrowLeftRight className="h-12 w-12 text-slate-400 mx-auto mb-3" />
-        <h3 className="text-xl font-medium text-slate-700 mb-2" data-unique-id="91ae38e8-df5f-463e-97b2-eb3bb6275310" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="70aaad9e-a9f4-42d6-bf46-24a7725b2b92" data-file-name="components/analyzer/DocumentCompare.tsx">Select Two Documents to Compare</span></h3>
-        <p className="text-slate-600 max-w-md mx-auto" data-unique-id="07d0abfd-8c00-427c-b3c8-ca3030771a86" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="1d6c4f3f-c31b-47d6-bfac-f423ae2817b5" data-file-name="components/analyzer/DocumentCompare.tsx">
+        <h3 className="text-xl font-medium text-slate-700 mb-2" data-unique-id="9c52fd8a-a9db-4584-9f5c-5a0f7f0b69c2" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="ecb449a1-a516-453d-9605-e6e66714b7fb" data-file-name="components/analyzer/DocumentCompare.tsx">Select Two Documents to Compare</span></h3>
+        <p className="text-slate-600 max-w-md mx-auto" data-unique-id="e6826969-db90-44b3-9151-8506c0592d0b" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="4e094c97-27c6-4d6c-8afc-d1ba5817625b" data-file-name="components/analyzer/DocumentCompare.tsx">
           Please select two documents from your document list to compare their contents and analysis results.
         </span></p>
       </div>;
   }
-  return <div className="p-4 md:p-6" data-unique-id="627e48f8-7558-4f8f-93c4-bb68e90fc7ba" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6" data-unique-id="75332474-c399-49eb-9445-909ba2dd92da" data-file-name="components/analyzer/DocumentCompare.tsx">
-        <h2 className="text-xl md:text-2xl font-semibold text-slate-800" data-unique-id="a51cf7ed-ab4c-4285-92ac-00f2c2210f7e" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="b0189046-45fb-4599-b02f-e226d1adae5d" data-file-name="components/analyzer/DocumentCompare.tsx">Document Comparison</span></h2>
+  return <div className="p-4 md:p-6" data-unique-id="5db5c2ed-27a4-4531-aa60-fd0fde59c247" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6" data-unique-id="40fd7ebb-7ff7-4732-9fbd-00f7217858ec" data-file-name="components/analyzer/DocumentCompare.tsx">
+        <h2 className="text-xl md:text-2xl font-semibold text-slate-800" data-unique-id="77a0208a-3723-404c-9656-cad33a1a390a" data-file-name="components/analyzer/DocumentCompare.tsx"><span className="editable-text" data-unique-id="d2f7c7e7-2372-4338-90dc-6c66d7996183" data-file-name="components/analyzer/DocumentCompare.tsx">Document Comparison</span></h2>
         
-        <div className="flex flex-wrap gap-2" data-unique-id="f065ebf2-c79e-443d-afb9-1a4ea0ac9622" data-file-name="components/analyzer/DocumentCompare.tsx">
+        <div className="flex flex-wrap gap-2" data-unique-id="57546537-6f77-4730-8a0b-2a6f850adcfe" data-file-name="components/analyzer/DocumentCompare.tsx">
           <CompareViewButton active={compareView === 'content'} onClick={() => setCompareView('content')} label="Content" />
           <CompareViewButton active={compareView === 'harmful'} onClick={() => setCompareView('harmful')} label="Harmful Points" count1={doc1Counts.harmful} count2={doc2Counts.harmful} color="text-red-600" />
           <CompareViewButton active={compareView === 'good'} onClick={() => setCompareView('good')} label="Good Points" count1={doc1Counts.good} count2={doc2Counts.good} color="text-green-600" />
@@ -104,25 +104,25 @@ export default function DocumentCompare() {
         </div>
       </div>
       
-      <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4" data-unique-id="32ba3af5-a933-4e58-a53e-64819be96f8c" data-file-name="components/analyzer/DocumentCompare.tsx">
-        <div className="p-4 bg-blue-50 rounded-lg border border-blue-200" data-unique-id="fb5b0410-a08c-4378-b904-5cef22eb9ec5" data-file-name="components/analyzer/DocumentCompare.tsx">
-          <h3 className="font-medium text-blue-800 mb-1 truncate" data-unique-id="b88fb07b-c71c-4455-b3f3-d22641189ed9" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">{doc1.name}</h3>
-          <p className="text-xs text-blue-600" data-unique-id="ba06a045-1109-4182-8ee2-33376e172924" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-            {new Date(doc1.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="edce4322-5d94-47fd-b26c-983fdd5b0f42" data-file-name="components/analyzer/DocumentCompare.tsx"> • 
-            </span>{doc1.analysisPoints.length}<span className="editable-text" data-unique-id="54f6501b-53e1-4fe7-abf7-f2c5d1a20dd1" data-file-name="components/analyzer/DocumentCompare.tsx"> points
+      <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4" data-unique-id="e19e196d-2db1-4ee0-b5d8-ae5d7e184455" data-file-name="components/analyzer/DocumentCompare.tsx">
+        <div className="p-4 bg-blue-50 rounded-lg border border-blue-200" data-unique-id="c6078b31-2dd4-45b0-9b2c-ce32bb78e8aa" data-file-name="components/analyzer/DocumentCompare.tsx">
+          <h3 className="font-medium text-blue-800 mb-1 truncate" data-unique-id="8cb52076-a04b-499c-9761-7be5a34cdbab" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">{doc1.name}</h3>
+          <p className="text-xs text-blue-600" data-unique-id="9c705bd3-478c-462e-bfd2-b3092943d3de" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+            {new Date(doc1.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="540b7f02-bb0a-4ac0-9f9d-f82de748eb8d" data-file-name="components/analyzer/DocumentCompare.tsx"> • 
+            </span>{doc1.analysisPoints.length}<span className="editable-text" data-unique-id="3cfc46a7-abab-4651-a38a-ef67a4c3fdf9" data-file-name="components/analyzer/DocumentCompare.tsx"> points
           </span></p>
         </div>
         
-        <div className="p-4 bg-purple-50 rounded-lg border border-purple-200" data-unique-id="fa66e0f1-e0e6-49ea-9129-7c74a4bf5528" data-file-name="components/analyzer/DocumentCompare.tsx">
-          <h3 className="font-medium text-purple-800 mb-1 truncate" data-unique-id="cbbe6812-b19f-461f-9f56-336bb9ee3c7b" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">{doc2.name}</h3>
-          <p className="text-xs text-purple-600" data-unique-id="7dbf732c-ae2f-47fc-9841-7a13df964e93" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-            {new Date(doc2.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="abf722a2-a3b6-45b7-b360-87329643e2e5" data-file-name="components/analyzer/DocumentCompare.tsx"> • 
-            </span>{doc2.analysisPoints.length}<span className="editable-text" data-unique-id="db48e10c-7a19-4996-838e-9bb6e0dfad1b" data-file-name="components/analyzer/DocumentCompare.tsx"> points
+        <div className="p-4 bg-purple-50 rounded-lg border border-purple-200" data-unique-id="67df2600-ed53-4bd8-8d24-0b928eb858b9" data-file-name="components/analyzer/DocumentCompare.tsx">
+          <h3 className="font-medium text-purple-800 mb-1 truncate" data-unique-id="2169b4a3-6ce9-47f8-8b6f-f610dcb5057e" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">{doc2.name}</h3>
+          <p className="text-xs text-purple-600" data-unique-id="d95ba7d0-c0e2-4e1c-81fa-a37427262d54" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+            {new Date(doc2.createdAt).toLocaleDateString()}<span className="editable-text" data-unique-id="a57e1dab-f3db-4bf9-9b09-4d1523e7f161" data-file-name="components/analyzer/DocumentCompare.tsx"> • 
+            </span>{doc2.analysisPoints.length}<span className="editable-text" data-unique-id="10cbfda7-bd25-4656-846a-81e39f79f35d" data-file-name="components/analyzer/DocumentCompare.tsx"> points
           </span></p>
         </div>
       </div>
       
-      {compareView === 'content' || compareView === 'summary' ? <div className="border border-slate-200 rounded-lg overflow-hidden" data-unique-id="bde01fee-7974-4e72-98eb-164621658fd5" data-file-name="components/analyzer/DocumentCompare.tsx">
+      {compareView === 'content' || compareView === 'summary' ? <div className="border border-slate-200 rounded-lg overflow-hidden" data-unique-id="100b2327-5432-44b2-997b-49a3436e6689" data-file-name="components/analyzer/DocumentCompare.tsx">
           <ReactDiffViewer oldValue={comparisonData.left} newValue={comparisonData.right} splitView={true} useDarkTheme={false} leftTitle={doc1.name} rightTitle={doc2.name} styles={{
         variables: {
           light: {
@@ -153,24 +153,24 @@ export default function DocumentCompare() {
           }
         }
       }} />
-        </div> : <div className="grid grid-cols-2 gap-6" data-unique-id="8245177c-4433-4a8d-ac14-6f218ef67eeb" data-file-name="components/analyzer/DocumentCompare.tsx">
-          <div className="space-y-4 mb-6 md:mb-0" data-unique-id="60d6d091-d0fb-41ec-9938-bd0598c8f374" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-            <h3 className="font-medium text-blue-800 border-b border-blue-200 pb-2 truncate" data-unique-id="9b19df6f-3351-43ad-9682-515d6b3a9bd7" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-              {doc1.name}<span className="editable-text" data-unique-id="1d1848c0-4b2b-49fc-a45b-acb43ed7230c" data-file-name="components/analyzer/DocumentCompare.tsx"> - </span>{compareView.charAt(0).toUpperCase() + compareView.slice(1)}<span className="editable-text" data-unique-id="eddb57ac-4292-4f6c-a2b8-b9d74bf654e1" data-file-name="components/analyzer/DocumentCompare.tsx"> Points
+        </div> : <div className="grid grid-cols-2 gap-6" data-unique-id="76bc1edd-f571-448d-aafe-d2e276d8cddf" data-file-name="components/analyzer/DocumentCompare.tsx">
+          <div className="space-y-4 mb-6 md:mb-0" data-unique-id="83967418-a158-42be-9f37-21364dca5ade" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+            <h3 className="font-medium text-blue-800 border-b border-blue-200 pb-2 truncate" data-unique-id="a2bb0a10-a604-49f8-8167-96cdb9afeb58" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+              {doc1.name}<span className="editable-text" data-unique-id="cd9c4f9d-98ba-42aa-a3ab-11baa3df293f" data-file-name="components/analyzer/DocumentCompare.tsx"> - </span>{compareView.charAt(0).toUpperCase() + compareView.slice(1)}<span className="editable-text" data-unique-id="02b762f5-b510-49d1-9d10-bc4351fafa0c" data-file-name="components/analyzer/DocumentCompare.tsx"> Points
             </span></h3>
             {doc1.analysisPoints.filter(point => point.type === compareView).map(point => <AnalysisPointCard key={point.id} point={point} isExpanded={!!expandedItems[`${doc1.id}-${point.id}`]} onToggle={() => toggleItem(`${doc1.id}-${point.id}`)} />)}
-            {doc1.analysisPoints.filter(point => point.type === compareView).length === 0 && <div className="text-center py-6 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="b3ff0a43-815a-4b9f-9b9a-a3a8a1be5cb2" data-file-name="components/analyzer/DocumentCompare.tsx">
-                <p className="text-slate-600" data-unique-id="73496cb5-1acd-4879-b22f-30cafbeaf256" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="5edd4492-cd0f-40d3-b077-016300c0eb11" data-file-name="components/analyzer/DocumentCompare.tsx">No </span>{compareView}<span className="editable-text" data-unique-id="7d1ffda4-02df-4690-a61b-191635810e00" data-file-name="components/analyzer/DocumentCompare.tsx"> points found.</span></p>
+            {doc1.analysisPoints.filter(point => point.type === compareView).length === 0 && <div className="text-center py-6 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="7bed8c69-3aa8-411e-bfc3-8564509d37b8" data-file-name="components/analyzer/DocumentCompare.tsx">
+                <p className="text-slate-600" data-unique-id="7192d56f-6fd6-48fd-91b4-f98fb07454b4" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="ff069735-fd7b-419c-962c-dc492aa505e5" data-file-name="components/analyzer/DocumentCompare.tsx">No </span>{compareView}<span className="editable-text" data-unique-id="6b48de64-06d4-4348-9f38-36071d178d9f" data-file-name="components/analyzer/DocumentCompare.tsx"> points found.</span></p>
               </div>}
           </div>
           
-          <div className="space-y-4" data-unique-id="15ba3cd0-0587-4271-8b81-aedaa4b028c8" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-            <h3 className="font-medium text-purple-800 border-b border-purple-200 pb-2 truncate" data-unique-id="41bc2469-7e78-48fe-b827-1586886dbf31" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-              {doc2.name}<span className="editable-text" data-unique-id="e94193a7-5f23-4c88-91f9-d7b1ccb8f947" data-file-name="components/analyzer/DocumentCompare.tsx"> - </span>{compareView.charAt(0).toUpperCase() + compareView.slice(1)}<span className="editable-text" data-unique-id="014c2038-576d-489c-855a-6286aca0f190" data-file-name="components/analyzer/DocumentCompare.tsx"> Points
+          <div className="space-y-4" data-unique-id="1e0ed5d2-62fb-4e84-a04e-6a2cd94d93b8" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+            <h3 className="font-medium text-purple-800 border-b border-purple-200 pb-2 truncate" data-unique-id="efb2dd5e-b0af-4dce-94c6-6792c8c2a364" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+              {doc2.name}<span className="editable-text" data-unique-id="3cc617d5-a186-4796-ad7f-2c5acbe7c211" data-file-name="components/analyzer/DocumentCompare.tsx"> - </span>{compareView.charAt(0).toUpperCase() + compareView.slice(1)}<span className="editable-text" data-unique-id="5ddff14b-af7a-4d91-bb27-b751df2dc9c8" data-file-name="components/analyzer/DocumentCompare.tsx"> Points
             </span></h3>
             {doc2.analysisPoints.filter(point => point.type === compareView).map(point => <AnalysisPointCard key={point.id} point={point} isExpanded={!!expandedItems[`${doc2.id}-${point.id}`]} onToggle={() => toggleItem(`${doc2.id}-${point.id}`)} />)}
-            {doc2.analysisPoints.filter(point => point.type === compareView).length === 0 && <div className="text-center py-6 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="c2d307d5-f790-4125-a5d3-e404fcc38ebc" data-file-name="components/analyzer/DocumentCompare.tsx">
-                <p className="text-slate-600" data-unique-id="42506a13-5168-4bbe-acab-7f27acac31df" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="d0554410-8465-43d5-8b2b-0fbebde200ab" data-file-name="components/analyzer/DocumentCompare.tsx">No </span>{compareView}<span className="editable-text" data-unique-id="e436a7de-254d-45b9-aac2-cfc45643e857" data-file-name="components/analyzer/DocumentCompare.tsx"> points found.</span></p>
+            {doc2.analysisPoints.filter(point => point.type === compareView).length === 0 && <div className="text-center py-6 bg-slate-50 rounded-lg border border-slate-200" data-unique-id="959eadde-7405-4eeb-a38a-ac2464c7956a" data-file-name="components/analyzer/DocumentCompare.tsx">
+                <p className="text-slate-600" data-unique-id="df142d67-69f2-484a-8356-db180a5a9437" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="bc869af0-6239-4ff4-8cf1-9ed69f4728e0" data-file-name="components/analyzer/DocumentCompare.tsx">No </span>{compareView}<span className="editable-text" data-unique-id="fa40d15a-0329-425b-be0a-98661a17fe9e" data-file-name="components/analyzer/DocumentCompare.tsx"> points found.</span></p>
               </div>}
           </div>
         </div>}
@@ -195,10 +195,10 @@ function CompareViewButton({
     scale: 1.03
   }} whileTap={{
     scale: 0.97
-  }} onClick={onClick} className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${active ? 'bg-purple-600 text-white' : 'bg-white text-slate-600 border border-slate-200 hover:border-purple-300'}`} data-unique-id="e642ca03-9aa4-4280-8dd0-7ba1dd0e1a7c" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+  }} onClick={onClick} className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${active ? 'bg-purple-600 text-white' : 'bg-white text-slate-600 border border-slate-200 hover:border-purple-300'}`} data-unique-id="c4145883-094b-42c8-addf-46a4c042a959" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
       {label}
-      {count1 !== undefined && count2 !== undefined && <span className={`ml-1.5 ${color || 'text-slate-500'}`} data-unique-id="1f92eb73-d734-4333-8168-9901c0db2639" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="c748b4f3-a892-4260-8bca-915ae7063bc6" data-file-name="components/analyzer/DocumentCompare.tsx">
-          (</span>{count1}<span className="editable-text" data-unique-id="85990478-efd2-4cb1-acc9-23677e7c9947" data-file-name="components/analyzer/DocumentCompare.tsx">/</span>{count2}<span className="editable-text" data-unique-id="9a40b701-15a6-459d-95a4-60a6e1fc57a8" data-file-name="components/analyzer/DocumentCompare.tsx">)
+      {count1 !== undefined && count2 !== undefined && <span className={`ml-1.5 ${color || 'text-slate-500'}`} data-unique-id="882cdf4d-3376-4e81-85ff-c5a999e26a0f" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true"><span className="editable-text" data-unique-id="440d5f7b-8eae-433a-9dca-ac9b01a6e6af" data-file-name="components/analyzer/DocumentCompare.tsx">
+          (</span>{count1}<span className="editable-text" data-unique-id="a4848248-577b-4421-8273-6f756d586d64" data-file-name="components/analyzer/DocumentCompare.tsx">/</span>{count2}<span className="editable-text" data-unique-id="c6a41c80-f39c-4a2a-b1c8-f637a9d24e4f" data-file-name="components/analyzer/DocumentCompare.tsx">)
         </span></span>}
     </motion.button>;
 }
@@ -246,13 +246,13 @@ function AnalysisPointCard({
     y: 0
   }} transition={{
     duration: 0.4
-  }} className={`bg-gradient-to-br ${style.gradient} border ${style.border} rounded-lg overflow-hidden shadow-sm ${style.shadow}`} data-unique-id="274c7be8-6013-4697-a5e3-ea7bb3b83b40" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
-      <div className="p-3 flex justify-between items-center cursor-pointer" onClick={onToggle} data-unique-id="1dadf44c-e848-4a09-b7c6-bdf121a77946" data-file-name="components/analyzer/DocumentCompare.tsx">
-        <div className="flex items-center space-x-2" data-unique-id="db1de3a5-f24d-4f73-8d51-8e75b2ec370a" data-file-name="components/analyzer/DocumentCompare.tsx">
-          <div className="p-1 bg-white rounded-lg shadow-inner" data-unique-id="ee43c28c-1e10-413c-be07-d9f1d83aa62f" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+  }} className={`bg-gradient-to-br ${style.gradient} border ${style.border} rounded-lg overflow-hidden shadow-sm ${style.shadow}`} data-unique-id="e442f41c-c8b1-4dc0-9c0d-7f7ccf6b4244" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+      <div className="p-3 flex justify-between items-center cursor-pointer" onClick={onToggle} data-unique-id="e784208a-4f6d-414d-b113-b890bb973ee1" data-file-name="components/analyzer/DocumentCompare.tsx">
+        <div className="flex items-center space-x-2" data-unique-id="3dd75642-3046-4fc2-8335-c1e618bcca9f" data-file-name="components/analyzer/DocumentCompare.tsx">
+          <div className="p-1 bg-white rounded-lg shadow-inner" data-unique-id="9a765df8-28e4-48d9-b88e-b8c3b3427a3a" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
             {style.icon}
           </div>
-          <div className={`${style.text} font-medium text-sm`} data-unique-id="009c0250-4bca-40be-b7d2-935cd2cb629c" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+          <div className={`${style.text} font-medium text-sm`} data-unique-id="fb03a27c-2bf4-4065-a826-0568403317f8" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
             {point.text}
           </div>
         </div>
@@ -260,7 +260,7 @@ function AnalysisPointCard({
         scale: 0.9
       }} whileHover={{
         scale: 1.1
-      }} data-unique-id="a8e8c09b-fd45-47ad-90f0-9c0d59771a60" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+      }} data-unique-id="1164de38-6f35-4bf6-8128-96b500ef8751" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
           {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </motion.button>
       </div>
@@ -278,8 +278,8 @@ function AnalysisPointCard({
       duration: 0.3
     }} className="border-t border-dashed px-3 py-2 bg-white/50 text-sm" style={{
       borderColor: style.border
-    }} data-unique-id="cc594744-bba6-42dd-aef2-33611f357a00" data-file-name="components/analyzer/DocumentCompare.tsx">
-          <p className={`${style.text} leading-relaxed`} data-unique-id="0589f2a3-785e-4402-9c88-e5c2561b885b" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
+    }} data-unique-id="0b974e25-28f6-47dc-8fbc-15b48aebcb9e" data-file-name="components/analyzer/DocumentCompare.tsx">
+          <p className={`${style.text} leading-relaxed`} data-unique-id="7f30ac20-1499-49b1-9b83-f22e0cf01294" data-file-name="components/analyzer/DocumentCompare.tsx" data-dynamic-text="true">
             {point.explanation}
           </p>
         </motion.div>}
