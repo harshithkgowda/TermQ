@@ -10,8 +10,8 @@ export const viewport = {
 };
 export const metadata: Metadata = {
   title: {
-    default: "Creatr",
-    template: "%s | Creatr"
+    default: "TermQ",
+    template: "%s | TermQ"
   },
   description: "A modern web application built with Next.js and TypeScript",
   applicationName: "Creatr",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Creatr"
+    title: "TermQ"
   },
   formatDetection: {
     telephone: false
