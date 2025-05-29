@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "TermQ",
     template: "%s | TermQ"
   },
-  description: "A modern web application built with Next.js and TypeScript",
+  description: "Catches Legal Red flags Before They Catch You",
   applicationName: "Creatr",
   keywords: ["next.js", "react", "typescript", "web application"],
   authors: [{
@@ -23,20 +23,20 @@ export const metadata: Metadata = {
   publisher: "Creatr Team",
   icons: {
     icon: [{
-      url: "/favicon-16x16.png",
+      url: "/termq.jpg",
       sizes: "16x16",
       type: "image/png"
     }, {
-      url: "/favicon-32x32.png",
+      url: "/termq.jpg",
       sizes: "32x32",
       type: "image/png"
     }, {
-      url: "/favicon.ico",
+      url: "/termq.jpg",
       sizes: "48x48",
       type: "image/x-icon"
     }],
     apple: [{
-      url: "/apple-touch-icon.png",
+      url: "/termq.jpg",
       sizes: "180x180",
       type: "image/png"
     }]
